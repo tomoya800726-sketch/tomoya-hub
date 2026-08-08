@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>唐澤智哉 ｜ 経営コンサルタント</title>
+<meta name="description" content="経営コンサルタント 唐澤智哉。役員会に出て、管理職と話し、現場まで行く。経営戦略・組織・人材・業務プロセス・会計・ITを横断し、中堅・中小企業の経営課題を見極め、実際に行動できるところまで落とします。">
+<link rel="canonical" href="https://tomoya.karasawaconsulting.jp/">
+<meta name="theme-color" content="#FBFCFD">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="唐澤智哉">
+<meta property="og:title" content="唐澤智哉 ｜ 経営コンサルタント">
+<meta property="og:description" content="会社の中に入らないと、見えないことがある。役員会に出る。管理職と話す。現場まで行く。">
+<meta property="og:url" content="https://tomoya.karasawaconsulting.jp/">
+<meta property="og:image" content="https://tomoya.karasawaconsulting.jp/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="唐澤智哉　経営コンサルタント">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   唐澤智哉 ── 個人ハブページ  第39稿
+   本文は本人原稿＋2026-08-08 の赤入れ47件を反映。変動する数値は載せない。
+   色：事務所ブランド（濃紺 #0A1C49 ／ 淡青灰 #ECF1F2）
+   ═══════════════════════════════════════════════════════════ */
+
+:root{
+  --paper:#FBFCFD; --tint:#ECF1F2; --tint-2:#DEE8EB;
+  --ink:#141A22; --ink-2:#4E5A68; --ink-3:#687582; --line:#DFE6E9;
+  --navy:#0A1C49; --blue:#2B57A6; --blue-lt:#8FB0DF; --on-navy:#EDF2F7;
+  --r:10px; --ease:cubic-bezier(.22,.61,.28,1);
+}
+*,*::before,*::after{box-sizing:border-box;}
+/* ★ 基準サイズ。rem はここを基準に決まるので、ここを上げると全体が上がる */
+html{font-size:17.5px;-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+@media (max-width:900px){ html{font-size:17px;} }
+@media (max-width:640px){ html{font-size:16.5px;} }
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Sans","Hiragino Kaku Gothic ProN",
+              "BIZ UDPGothic","Yu Gothic","YuGothic",Meiryo,-apple-system,"Segoe UI",sans-serif;
+  font-size:1rem;font-weight:400;line-height:1.92;letter-spacing:.02em;
+  font-feature-settings:"palt" 1;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+@media (max-width:640px){ body{line-height:1.92;} }
+
+a{color:inherit;text-decoration:none;}
+p{margin:0 0 1.35em;}
+p:last-child{margin-bottom:0;}
+strong{font-weight:700;}
+img{max-width:100%;display:block;}
+
+.mark{font-family:Georgia,"Times New Roman",serif;font-style:italic;
+      letter-spacing:.05em;font-feature-settings:normal;}
+.label{font-size:.73rem;font-weight:700;letter-spacing:.2em;
+       text-transform:uppercase;font-feature-settings:normal;}
+
+.wrap{max-width:70rem;margin:0 auto;padding:0 2.5rem;}
+/* 追従ナビ（4.5rem）の下に見出しが潜らないようにする */
+section[id],main[id],li[id]{scroll-margin-top:5.4rem;}
+/* キーボード操作の現在地。マウス操作では出ない */
+a:focus-visible,summary:focus-visible{
+  outline:2px solid var(--blue);outline-offset:3px;border-radius:3px;}
+@media (max-width:900px){ .wrap{padding:0 1.9rem;} }
+@media (max-width:640px){ .wrap{padding:0 1.3rem;} }
+
+/* ═══ ナビ ═══ */
+.nav{position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--paper) 80%, transparent);
+  -webkit-backdrop-filter:saturate(1.5) blur(14px);backdrop-filter:saturate(1.5) blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s var(--ease);}
+.nav.stuck{border-bottom-color:var(--line);}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:4.5rem;gap:1rem;}
+.nav .sig{font-size:.95rem;font-weight:700;letter-spacing:.03em;
+  opacity:0;transform:translateY(-5px);pointer-events:none;
+  transition:opacity .35s var(--ease),transform .35s var(--ease);}
+.nav.named .sig{opacity:1;transform:none;pointer-events:auto;}
+.nav ul.deskmenu{display:flex;gap:1.7rem;list-style:none;margin:0;padding:0;}
+.nav ul a{font-size:.85rem;font-weight:600;letter-spacing:.04em;color:var(--ink-2);
+  position:relative;padding-bottom:.3rem;transition:color .25s var(--ease);}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;
+  background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .32s var(--ease);}
+.nav ul a:hover{color:var(--ink);}
+.nav ul a:hover::after{transform:scaleX(1);transform-origin:left;}
+/* いま見ている節 */
+.nav ul a.here{color:var(--blue);}
+.nav ul a.here::after{transform:scaleX(1);transform-origin:left;}
+.mmenu ul a.here{color:var(--blue);background:var(--tint);}
+@media (max-width:1100px){ .nav ul.deskmenu{display:none;} }
+@media (min-width:1101px){ .mmenu{display:none;} }
+
+/* 画面が狭いときのメニュー */
+.mmenu{position:relative;}
+.mmenu summary{list-style:none;cursor:pointer;font-size:.78rem;font-weight:700;
+  letter-spacing:.14em;color:var(--navy);border:1px solid var(--line);
+  border-radius:6px;padding:.5rem 1.05rem;transition:background .2s var(--ease),color .2s var(--ease);}
+.mmenu summary::-webkit-details-marker{display:none;}
+.mmenu[open] summary{background:var(--navy);color:#fff;border-color:var(--navy);}
+.mmenu ul{position:absolute;right:0;top:calc(100% + .65rem);z-index:60;margin:0;
+  background:var(--paper);border:1px solid var(--line);border-radius:8px;
+  padding:.55rem;min-width:13rem;display:grid;gap:.1rem;list-style:none;
+  box-shadow:0 14px 32px -20px rgba(10,28,73,.3);}
+.mmenu ul a{display:block;padding:.62rem .85rem;font-size:.9rem;font-weight:600;border-radius:5px;}
+.mmenu ul a:hover{background:var(--tint);}
+
+/* ═══ ヒーロー ═══ */
+.hero{padding:5rem 0 6rem;}
+@media (max-width:900px){ .hero{padding:3rem 0 3.6rem;} }
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:0 5rem;align-items:center;}
+@media (max-width:900px){ .hero-grid{grid-template-columns:1fr;gap:2.8rem;} }
+
+.hero .rule{width:2.75rem;height:2px;border-radius:2px;background:var(--blue);margin-bottom:1.6rem;}
+.hero .role{color:var(--blue);margin:0 0 1.5rem;font-size:.92rem;letter-spacing:.16em;}
+.name{margin:0;font-size:clamp(3rem,7.6vw,5.1rem);font-weight:700;letter-spacing:-.008em;line-height:1.12;}
+.name-en{margin:1.05rem 0 0;color:var(--ink-2);font-size:1.08rem;letter-spacing:.08em;}
+.tagline{margin:2.6rem 0 0;font-size:clamp(1.3rem,3vw,1.72rem);
+  font-weight:700;line-height:1.68;letter-spacing:0;max-width:19em;}
+.hero .sub{margin:1.5rem 0 0;color:var(--ink-2);font-size:.98rem;max-width:28em;line-height:1.95;}
+.hero-acts{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.4rem;}
+
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:1.05rem 2rem;border-radius:7px;
+  font-size:.85rem;font-weight:700;letter-spacing:.04em;border:1.5px solid var(--navy);
+  transition:background .28s var(--ease),color .28s var(--ease),
+             transform .28s var(--ease),box-shadow .28s var(--ease);}
+.btn svg{width:14px;height:14px;transition:transform .3s var(--ease);}
+.btn:hover{transform:translateY(-2px);}
+.btn:hover svg{transform:translateX(4px);}
+.btn-solid{background:var(--navy);color:#fff;}
+.btn-solid:hover{box-shadow:0 8px 20px -12px rgba(10,28,73,.25);}
+.btn-ghost{color:var(--navy);}
+.btn-ghost:hover{background:var(--navy);color:#fff;}
+.portrait{position:relative;margin:0;}
+.portrait::before{content:"";position:absolute;inset:1.8rem -1.8rem -1.8rem 1.8rem;
+  background:var(--tint);border-radius:var(--r);z-index:0;}
+.portrait .frame{position:relative;z-index:1;overflow:hidden;border-radius:var(--r);
+  aspect-ratio:4/5;background:var(--tint-2);}
+.portrait .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;}
+@media (max-width:900px){
+  .portrait{max-width:24rem;margin-inline:auto;}
+  .portrait::before{inset:1.2rem -1.2rem -1.2rem 1.2rem;}
+}
+
+/* ═══ 信頼の帯（事実だけを、静かに並べる） ═══ */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:1.7rem 0;margin-bottom:3.5rem;}
+.trust .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem 3.5rem;}
+@media (max-width:760px){ .trust .wrap{grid-template-columns:1fr;gap:1.6rem;} }
+.trust .wrap > div{border-top:1px solid var(--line);padding-top:.9rem;}
+.trust .cat{display:block;font-size:.7rem;font-weight:700;letter-spacing:.18em;
+  color:var(--blue);margin-bottom:.5rem;}
+.trust b{display:block;font-size:.95rem;font-weight:700;line-height:1.65;}
+.trust b ~ b{margin-top:.65rem;}
+.trust span{display:block;margin-top:.15rem;color:var(--ink-3);font-size:.8rem;line-height:1.7;}
+
+/* ═══ 導線 ═══ */
+.routes{padding:0 0 1rem;}
+.routes .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+@media (max-width:820px){ .routes .wrap{grid-template-columns:1fr;} }
+.route{padding:2.3rem 2rem 2rem;border-radius:var(--r);background:var(--tint);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);}
+.route:hover{transform:translateY(-2px);box-shadow:0 12px 26px -22px rgba(10,28,73,.22);}
+.route .rn{color:var(--blue);font-size:.82rem;display:block;margin-bottom:1rem;}
+.route h3{margin:0 0 .65rem;font-size:1.1rem;font-weight:700;line-height:1.65;}
+.route p{color:var(--ink-2);font-size:.93rem;line-height:1.85;margin:0 0 1.3rem;}
+.route .go{display:inline-flex;align-items:center;gap:.55rem;
+  font-size:.82rem;font-weight:700;letter-spacing:.06em;color:var(--blue);}
+.route .go svg{width:13px;height:13px;transition:transform .3s var(--ease);}
+.route:hover .go svg{transform:translateX(5px);}
+
+/* ═══ 理念 ═══ */
+.creed{background:var(--navy);color:var(--on-navy);padding:7rem 0;position:relative;overflow:hidden;}
+@media (max-width:640px){ .creed{padding:4.5rem 0;} }
+.creed::before{content:"“";position:absolute;left:-1.5rem;top:-6rem;
+  font-family:Georgia,serif;font-size:32rem;line-height:1;color:rgba(255,255,255,.05);pointer-events:none;}
+.creed .wrap{position:relative;display:grid;grid-template-columns:1fr 25rem;
+  gap:0 4.5rem;align-items:center;}
+@media (max-width:1040px){ .creed .wrap{grid-template-columns:1fr 21rem;gap:0 3rem;} }
+@media (max-width:860px){ .creed .wrap{grid-template-columns:1fr;gap:2.6rem;} }
+.creed .label{color:var(--blue-lt);margin:0 0 2.2rem;}
+.creed blockquote{margin:0;max-width:16em;font-size:clamp(1.5rem,3.6vw,2.3rem);
+  font-weight:700;line-height:1.68;letter-spacing:0;}
+.creed .after{margin:2.2rem 0 0;max-width:26em;font-size:1rem;line-height:2;opacity:.9;}
+.creed .after p{margin:0 0 1.1em;}
+.creed .after strong{opacity:1;font-weight:700;}
+.creed figure{margin:0;}
+.creed figure img{width:100%;height:auto;border-radius:8px;}
+@media (max-width:860px){ .creed figure{max-width:22rem;} }
+
+/* ═══ 節 ═══ */
+.sec{padding:5.5rem 0;border-top:1px solid var(--line);}
+@media (max-width:640px){ .sec{padding:4rem 0;} }
+.sec-grid{display:grid;grid-template-columns:13rem 1fr;gap:0 4.5rem;align-items:start;}
+@media (max-width:900px){ .sec-grid{grid-template-columns:1fr;gap:2.2rem;} }
+.aside{position:sticky;top:6.8rem;}
+@media (max-width:900px){ .aside{position:static;} }
+.aside .n{color:var(--blue);font-size:.84rem;display:block;margin-bottom:.6rem;}
+.aside h2{margin:0;font-size:1.08rem;font-weight:700;line-height:1.7;letter-spacing:-.008em;}
+.aside .hint{margin:1rem 0 0;color:var(--ink-3);font-size:.85rem;line-height:1.85;}
+
+.col{max-width:41rem;}
+.col h3{margin:3.2rem 0 1.1rem;font-size:1.2rem;font-weight:700;line-height:1.7;letter-spacing:-.008em;}
+.col h3:first-child{margin-top:0;}
+.muted{color:var(--ink-2);font-size:.96rem;}
+.lead{font-size:1.16rem;font-weight:700;line-height:1.85;margin:0 0 1.5em;}
+.punch{margin:2.4rem 0;padding:.2rem 0 .2rem 1.5rem;border-left:3px solid var(--navy);
+  font-size:1.08rem;font-weight:700;line-height:1.85;}
+.said{margin:2.2rem 0;padding:1.6rem 1.8rem;border-left:3px solid var(--blue);
+  background:var(--tint);border-radius:0 var(--r) var(--r) 0;
+  font-size:1.08rem;font-weight:700;line-height:1.8;}
+.axiom{margin:0 0 1.2em;font-size:1.04rem;font-weight:700;line-height:1.85;}
+
+/* 短い断言を、行のリズムで見せる */
+.beat{margin:2rem 0 2.2rem;padding:0;list-style:none;display:grid;gap:.5rem;}
+.beat li{font-size:1.15rem;font-weight:700;line-height:1.7;
+  padding-left:1.5rem;position:relative;}
+.beat li::before{content:"";position:absolute;left:0;top:.88em;
+  width:.65rem;height:2px;border-radius:2px;background:var(--blue);}
+
+/* 症状の羅列（チップ） */
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0 1.9rem;padding:0;list-style:none;}
+.chips li{padding:.55rem 1.15rem;background:var(--tint);border-radius:999px;
+  font-size:.9rem;font-weight:500;}
+
+/* 「〜ではなく」の置き換え */
+.contrast{margin:2rem 0 2.2rem;padding:0;list-style:none;display:grid;gap:.7rem;}
+.contrast li{background:var(--tint);border-radius:var(--r);padding:1.15rem 1.5rem;
+  display:grid;grid-template-columns:1fr 1.6rem 1.2fr;gap:.6rem;align-items:center;}
+.contrast .x{color:var(--ink-3);font-size:.96rem;line-height:1.7;}
+.contrast .arw{color:var(--blue);font-size:1.05rem;text-align:center;}
+.contrast .o{font-weight:700;font-size:1.02rem;line-height:1.7;}
+@media (max-width:640px){
+  .contrast li{grid-template-columns:1fr;gap:.15rem;}
+  .contrast .arw{text-align:left;font-size:.9rem;}
+  .contrast .arw::before{content:"↓";}
+  .contrast .arw{color:transparent;}
+  .contrast .arw::before{color:var(--blue);}
+}
+
+/* 本文中の写真。切り抜かない */
+.shot{margin:2.4rem 0;}
+.shot img{width:100%;height:auto;border-radius:var(--r);}
+.shot figcaption{margin-top:.8rem;color:var(--ink-3);font-size:.84rem;line-height:1.8;}
+
+
+/* 支援の現場 ── ここだけ地の色を変えて、章が変わったことを見せる */
+#cases{background:#F3F6F7;}
+.cases{display:grid;gap:1.4rem;margin:0 0 1.6rem;padding:0;list-style:none;}
+.case{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.9rem 1.9rem;}
+.case .cn{color:var(--blue);font-size:.8rem;display:block;margin-bottom:.7rem;}
+.case h4{margin:0 0 1.3rem;font-size:1.14rem;font-weight:700;line-height:1.65;}
+.case dl{margin:0;display:grid;gap:1rem;}
+.case dl > div{display:grid;grid-template-columns:8rem 1fr;gap:1.2rem;}
+.case dt{margin:0;color:var(--blue);font-size:.77rem;font-weight:700;
+  letter-spacing:.08em;padding-top:.45em;}
+.case dd{margin:0;font-size:.95rem;line-height:1.9;}
+@media (max-width:640px){
+  .case{padding:1.6rem 1.4rem;}
+  .case dl > div{grid-template-columns:1fr;gap:.15rem;}
+  .case dt{padding-top:0;}
+}
+
+/* 三箇条 */
+.never{list-style:none;margin:1.6rem 0 0;padding:0;}
+.never li{display:grid;grid-template-columns:2.6rem 1fr;gap:.6rem;padding:1.05rem 0;
+  border-bottom:1px solid var(--line);font-weight:700;line-height:1.75;}
+.never li:first-child{border-top:1px solid var(--line);}
+.never li em{color:var(--blue);font-size:.78rem;font-style:italic;font-family:Georgia,serif;padding-top:.28em;}
+
+/* 領域タイル */
+.domains{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin:0 0 3rem;}
+.domains .dom:last-child{grid-column:1/-1;}
+@media (max-width:640px){ .domains{grid-template-columns:1fr;} }
+.dom{background:var(--tint);border-radius:var(--r);padding:1.5rem 1.5rem 1.4rem;}
+.dom .di{display:flex;margin-bottom:.8rem;color:var(--blue);}
+.dom .di svg{width:18px;height:18px;}
+.dom h4{margin:0 0 .45rem;font-size:1.02rem;font-weight:700;line-height:1.6;}
+.dom p{margin:0;color:var(--ink-2);font-size:.9rem;line-height:1.8;}
+
+/* 発信 */
+/* 発信のバナー */
+.banners{list-style:none;margin:0 0 2rem;padding:0;display:grid;gap:1rem;}
+.banners li{position:relative;}
+/* ★ 4:1。5:2（717x287px）は5枚並べると1,566px あって縦に重かった。
+   元画像の白フチを落とし、上下を対称に切って 717x179px にした（合計 971px）。 */
+.banners img{display:block;width:100%;height:auto;aspect-ratio:4/1;border-radius:10px;
+  border:1px solid var(--line);box-shadow:0 1px 4px -1px rgba(10,28,73,.10);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);}
+.banners a:hover img{transform:translateY(-2px);box-shadow:0 14px 30px -20px rgba(10,28,73,.35);}
+/* ★ サービスのマーク。各社の公式ブランド色で出す。
+   白い台に載せるのは、Spotify のガイドラインが「緑のロゴは黒か白の背景の上だけ」と
+   定めているため（YouTube と note の下地も、これで揃う）。 */
+.banners .svc{position:absolute;top:.6rem;right:.6rem;z-index:2;
+  height:2rem;min-width:2rem;padding:0 .45rem;border-radius:.55rem;
+  background:#FBFCFD;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 9px -3px rgba(10,28,73,.5);}
+.banners .svc svg{display:block;width:auto;}
+.banners .svc.yt svg{height:1.02rem;}          /* YouTube  #FF0000 */
+.banners .svc.sp svg{height:1.25rem;}          /* Spotify  #1ED760 */
+.banners .svc.nt b{font-size:.84rem;font-weight:700;letter-spacing:-.045em;
+  color:#41C9B4;line-height:1;padding-bottom:.08em;font-feature-settings:normal;}
+@media (max-width:640px){
+  .banners .svc{top:.4rem;right:.4rem;height:1.55rem;min-width:1.55rem;
+    padding:0 .35rem;border-radius:.45rem;}
+  .banners .svc.yt svg{height:.8rem;}
+  .banners .svc.sp svg{height:.98rem;}
+  .banners .svc.nt b{font-size:.66rem;}
+}
+
+/* 記事 */
+.reads{list-style:none;margin:0;padding:0;display:grid;gap:.7rem;}
+.reads a{display:grid;grid-template-columns:2.6rem 1fr auto;gap:1.3rem;align-items:baseline;
+  padding:1.35rem 1.5rem;border-radius:var(--r);background:var(--tint);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);}
+.reads a:hover{transform:translateX(4px);box-shadow:0 10px 22px -20px rgba(10,28,73,.22);}
+.reads .rn{color:var(--blue);font-size:.76rem;}
+.reads .rt{font-size:1rem;font-weight:700;line-height:1.7;}
+.reads .rt small{display:block;color:var(--ink-3);font-size:.79rem;font-weight:500;margin-top:.1rem;}
+.reads .rm{color:var(--ink-3);font-size:.79rem;font-weight:500;letter-spacing:.04em;white-space:nowrap;}
+.reads .flat{display:grid;grid-template-columns:2.6rem 1fr auto;gap:1.3rem;align-items:baseline;
+  padding:1.35rem 1.5rem;border-radius:var(--r);background:var(--tint);}
+@media (max-width:640px){
+  .reads a,.reads .flat{grid-template-columns:2rem 1fr;gap:.8rem;padding:1.2rem 1.1rem;}
+  .reads .rm{grid-column:2;}
+}
+
+/* 依頼 */
+.asks{margin:0 0 2.2rem;padding:0;list-style:none;}
+.asks li{padding:.9rem 0;border-bottom:1px solid var(--line);font-size:.95rem;
+  display:flex;gap:.9rem;align-items:baseline;}
+.asks li:first-child{border-top:1px solid var(--line);}
+.asks li::before{content:"";width:.45rem;height:2px;border-radius:2px;background:var(--blue);
+  flex:none;transform:translateY(-.35em);}
+
+/* フッタ */
+footer{background:var(--navy);color:var(--on-navy);padding:4.5rem 0 3.5rem;}
+footer .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2.5rem;
+  padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.12);}
+footer .fname{font-size:1.2rem;font-weight:700;}
+footer .frole{margin:.5rem 0 0;font-size:.78rem;opacity:.58;letter-spacing:.05em;}
+footer nav{display:flex;flex-wrap:wrap;gap:.7rem 2rem;}
+footer nav a{font-size:.88rem;font-weight:500;opacity:.78;
+  transition:opacity .25s var(--ease),color .25s var(--ease);}
+footer nav a:hover{opacity:1;color:var(--blue-lt);}
+footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
+
+/* 出現 */
+.rise{opacity:0;transform:translateY(18px);
+  transition:opacity .85s var(--ease),transform .85s var(--ease);}
+.rise.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+  *{animation:none !important;transition:none !important;}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="sig" href="#top">唐澤智哉</a>
+    <ul class="deskmenu">
+      <li><a href="#who">何を見ているか</a></li>
+      <li><a href="#work">私の仕事</a></li>
+      <li><a href="#cases">支援の現場</a></li>
+      <li><a href="#belief">経営について</a></li>
+      <li><a href="#people">人と組織</a></li>
+      <li><a href="#career">経歴</a></li>
+      <li><a href="#media">発信</a></li>
+      <li><a href="#contact">ご依頼</a></li>
+    </ul>
+    <details class="mmenu">
+      <summary>MENU</summary>
+      <ul>
+        <li><a href="#who">何を見ているか</a></li>
+        <li><a href="#work">私の仕事</a></li>
+        <li><a href="#cases">支援の現場</a></li>
+        <li><a href="#belief">経営について</a></li>
+        <li><a href="#people">人と組織</a></li>
+        <li><a href="#career">経歴</a></li>
+        <li><a href="#media">発信</a></li>
+        <li><a href="#contact">ご依頼</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ ヒーロー ══════════ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="rise">
+        <div class="rule"></div>
+        <p class="role label">経営コンサルタント</p>
+        <h1 class="name">唐澤 智哉</h1>
+        <p class="name-en mark">Tomoya&nbsp;Karasawa</p>
+
+        <p class="tagline">会社の中に入らないと、<br>見えないことがある。</p>
+        <p class="sub">数字だけ見ても分からない。<br>社長の話だけ聞いても分からない。<br><strong>役員会に出る。管理職と話す。現場まで行く。</strong></p>
+
+        <div class="hero-acts">
+          <a class="btn btn-solid" href="#contact">ご依頼・ご相談
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+          <a class="btn btn-ghost" href="#work">私の仕事
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        </div>
+      </div>
+
+      <figure class="portrait rise">
+        <div class="frame"><img src="images/portrait.jpg" alt="唐澤智哉" width="1200" height="1800" fetchpriority="high" decoding="async"></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══════════ 信頼の帯 ══════════ -->
+  <section class="trust rise">
+    <div class="wrap">
+      <div>
+        <span class="cat">資格</span>
+        <b>中小企業診断士</b>
+        <b>ITストラテジスト</b>
+        <b>プロジェクトマネージャ</b>
+        <span>いずれも国家資格</span>
+      </div>
+      <div>
+        <span class="cat">公職</span>
+        <b>中小企業アドバイザー（経営支援）</b>
+        <span>独立行政法人中小企業基盤整備機構</span>
+        <b>ビジネスサポートサービス専門家</b>
+        <span>公益財団法人大田区産業振興協会</span>
+      </div>
+      <div>
+        <span class="cat">公的機関での登壇</span>
+        <b>中小企業庁</b>
+        <b>愛知県・あいち産業振興機構</b>
+        <b>品川区</b>
+        <span>いずれもDX・業務改善をテーマに講師</span>
+      </div>
+      <div>
+        <span class="cat">経験</span>
+        <b>経営・業務・IT を横断して20年以上</b>
+        <span>大手企業のERP導入から、中堅・中小企業の経営支援まで</span>
+        <b>組織マネジメント 7年</b>
+        <span>コンサルティング組織のマネージャーとして</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 導線 ══════════ -->
+  <section class="routes">
+    <div class="wrap">
+      <a class="route rise" href="#contact">
+        <span class="rn mark">Consulting</span>
+        <h3>経営に関するご相談</h3>
+        <p>初回60分は無料です。問題意識はあるものの、課題の優先順位が定まっていない段階でもご相談いただけます。</p>
+        <span class="go">相談する<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="route rise" href="#contact">
+        <span class="rn mark">Speaking</span>
+        <h3>講演・企業研修</h3>
+        <p>対象は、新入社員から経営層まで階層を問いません。階層別のほか、会計やロジカルシンキングなど、テーマ別の研修も承ります。</p>
+        <span class="go">依頼する<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="route rise" href="#media">
+        <span class="rn mark">Writing</span>
+        <h3>書いているもの、話しているもの</h3>
+        <p>経営コラム、note、YouTube、音声。記事の執筆・監修、取材もお受けしています。</p>
+        <span class="go">読む・観る・聴く<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════ 理念 ══════════ -->
+  <section class="creed">
+    <div class="wrap rise">
+      <div>
+        <p class="label">仕事について</p>
+        <blockquote>会社の中には、みんな薄々分かっているのに、誰も口にしないことがあります。</blockquote>
+        <div class="after">
+          <p><strong>私は、そこを扱います。</strong>ただし、いきなり正論をぶつけることはしません。まず、話を聞きます。</p>
+          <p>社内の人間が本当のことを言うと、立場を失うリスクがあります。同じ内容でも、社内の人が言えば人間関係や立場の問題になり、外部の人間が言えば経営の論点として扱える。<strong>それは能力の差ではなく、立場の差です。</strong></p>
+          <p>利害関係がなく、社内のどの派閥にも属していない。<strong>だから、その線を越えられます。</strong></p>
+        </div>
+      </div>
+      <figure>
+        <img src="images/meeting.jpg" alt="打ち合わせの席で話しているところ" width="1000" height="1250" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══════════ 01 何をしているか ══════════ -->
+  <section class="sec" id="who">
+    <div class="wrap sec-grid">
+      <div class="aside">
+        <span class="n mark">01</span>
+        <h2>会社の中で、<br>何を見ているか</h2>
+      </div>
+      <div class="col rise">
+        <p>現場で実際に起きていることを見る、管理職とディスカッションする、<strong>その上で社長とも一緒に考えます。</strong>社長とだけ話して判断することはしません。</p>
+
+        <p class="lead">経営戦略、組織・人材、業務プロセス、会計、IT。</p>
+
+        <p class="muted">どこへ向かうか、誰が担うか、どう回すか、どう測るか、何で支えるか。<strong>問いはそれぞれ違います。ただし、切り離すことはできません。</strong></p>
+
+        <p>私が専門を一つに絞っていないのは、<strong>会社の問題は一つの専門だけでは解決しないことが多いからです。</strong>一つの領域だけを直すと、たいてい別の領域で詰まります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 02 私の仕事 ══════════ -->
+  <section class="sec" id="work">
+    <div class="wrap sec-grid">
+      <div class="aside">
+        <span class="n mark">02</span>
+        <h2>私の仕事</h2>
+        <p class="hint">私の仕事には順序があります。入れ替えると、うまくいきません。</p>
+      </div>
+      <div class="col rise">
+
+        <h3>まず、話を聞く</h3>
+        <p><strong>言いにくいことを扱うには、順序があります。</strong>私が最初にするのは、話すことではなく、聞くことです。</p>
+
+        <ul class="beat">
+          <li>社長にも聞く。</li>
+          <li>役員にも聞く。</li>
+          <li>管理職にも聞く。</li>
+          <li>そして、現場まで自分の目で行って確かめる。</li>
+        </ul>
+
+        <figure class="shot lst">
+          <img src="images/listening.jpg" alt="会議のテーブルで、相手の話を聞いているところ" width="1200" height="800" loading="lazy" decoding="async">
+        </figure>
+
+        <p>すると、「この人が悪い」と思われていた問題の原因が、<strong>実は仕組みの問題だった</strong>ということもあります。</p>
+        <p>逆に、「仕組みを変えれば何とかなる」と思われていた問題の原因が、<strong>実は社長自身にあった</strong>ということもあります。</p>
+        <p>だから私は、<strong>最初から答えを決めつけて入りません。</strong></p>
+
+        <p class="punch">話を聞き、現場を見て、何が起きているのかを一緒に整理する。そこから始めます。</p>
+
+        <h3>一緒に整理する、というのは</h3>
+        <p>私は、<strong>問題・原因・課題を分けて考えます。</strong></p>
+        <ul class="beat">
+          <li>問題は、ありたい姿と現状とのギャップ。</li>
+          <li>原因は、なぜそのギャップが生まれているのか。</li>
+          <li>課題は、そのギャップを埋めるために、いま優先して取り組むテーマ。</li>
+        </ul>
+        <p>経営資源には限りがあります。だから、表面化した問題すべてを一気に解決することはできません。<strong>原因を分け、影響を見て、どこから手をつけるかを決めていきます。</strong></p>
+        <p>そして、<strong>わからないことは、分ける。</strong>分けないまま考えていると、わからなくなります。</p>
+
+        <figure class="shot wb">
+          <img src="images/whiteboard.jpg" alt="ホワイトボードに、現状と目指すもののギャップを問題として書き出しているところ" width="1800" height="900" loading="lazy" decoding="async">
+          <figcaption>現状と、目指すもの。その差が「問題」で、そこから論点を立てる。ここを飛ばすと、打ち手だけが増えていきます。</figcaption>
+        </figure>
+
+        <h3>唐澤智哉を介すと、着地点が見えることがある</h3>
+        <p>立場が違えば、見え方が違います。会長と社長、社長と管理職、管理職と現場、部門どうし。<strong>取締役の中でも違います。</strong></p>
+        <p>やっかいなのは、対立しているときではありません。<strong>同じ目的で話しているのに、認識だけがずれているとき</strong>です。本人たちに、ずれている自覚がありません。</p>
+        <p>DX構想策定のコンサルティングを推進したとき、2つの部門の部長が対立して、要件が決まらなくなったことがあります。両方から聞くと、<strong>どちらも「顧客満足度を上げる」という目的は同じ</strong>で、ずれていたのはそのアプローチだけでした。目的は同じであること、ずれている部分はどこかを、ホワイトボードに並べて書きながら整理していくと、両方が「確かにそうだ」と言いました。</p>
+        <p>役員会では、こういうこともあります。<strong>社長は取締役に直接意見を言えるけれど、取締役は社長に言えない。</strong>そこで取締役は私に意見を言い、私がそれを社長に渡します。同じ会議室にいるのに、直接は話さない。</p>
+
+        <p class="punch">人はみんな違う。その当たり前の前提に立つと、それぞれが納得できる着地点が見えてくることがあります。私は、そうやって立場の違う人たちの間に入り、着地点を探すということを繰り返してきました。</p>
+
+        <h3>必要なら、言いにくいことも言う</h3>
+        <p>ある社長には、こうお伝えしたことがあります。</p>
+
+        <p class="said">会社がこれ以上大きくならない原因は、社長、あなたですよ。</p>
+
+        <p>もちろん、最初からそのようなことを社長に伝えるわけではありません。そこに至るまでに、何人もの話を聞き、会議を見て、実際の仕事を見ています。<strong>そのうえで、会社をさらに成長させるために必要だと判断すれば、言います。</strong></p>
+        <p>外部の人間を入れる意味は、<strong>社内では言いにくいことまで、経営の論点として扱えること</strong>にあると思っています。</p>
+
+        <h3>でも、代わりにはやらない</h3>
+        <p>私は、答えを渡して終わるコンサルティングはしたくありません。</p>
+
+        <p>経営計画も、業務フローも、私が作った方が早いことはあります。<strong>しかし、それでは自分たちで考え、回していく力が社内に残りません。</strong></p>
+
+        <p>外から正しいことを言うだけでも、会社は動きません。変化を伴う取り組みは、<strong>「言われたからやる」だけでは続かない</strong>からです。</p>
+
+        <p>だから、答えを置くのではなく、<strong>問いを渡します。</strong></p>
+
+        <p>問いに向き合うことで、自分たちが何を考えているのかが言葉になります。自分の言葉で考え、自分たちで決める。<strong>そこから、実行する理由が生まれます。</strong></p>
+
+        <p>私は外部の人間なので、社内の実行主体にはなれません。<strong>実際に動くのは、社内の人たちです。</strong>だから、その人たちが自分で考え、動ける状態をつくることに時間を使います。</p>
+
+        <p>一緒に作る。必要なことは教える。一緒にやってみる。そして、<strong>少しずつ自分たちで回せるようにする。</strong></p>
+
+        <p><strong>研修も同じです。</strong>知識を覚えて帰ってもらうことが目的ではありません。研修で扱っていない問題に出会ったときにも、自分で考え、答えを出せるようになること。そのためにやっています。</p>
+
+        <p>だから私は、自分がうまく説明できたかではなく、<strong>相手が理解し、自分で使えるようになったか</strong>を見ます。</p>
+
+        <p class="punch">最後は「唐澤さんがいなくても、できるようになりました」と言われる状態をつくる。それが、この仕事のゴールだと思っています。</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 03 支援の現場 ══════════ -->
+  <section class="sec" id="cases">
+    <div class="wrap sec-grid">
+      <div class="aside">
+        <span class="n mark">03</span>
+        <h2>支援の現場</h2>
+        <p class="hint">3件とも、相談されたことと、本当の問題が違いました。</p>
+      </div>
+      <div class="col rise">
+        <ul class="cases">
+
+          <li class="case">
+            <span class="cn mark">Case 01</span>
+            <h4>「経営理念をつくりたい」と言われて、組織の形を変えた</h4>
+            <dl>
+              <div><dt>相談されたこと</dt><dd>新規事業で会社をもっと大きくしたい。ただ、いまの組織のままでは難しい。だから<strong>経営理念をつくって、社内に浸透させたい</strong>。</dd></div>
+              <div><dt>見えてきたこと</dt><dd>新しく採用した課長や若手から話を聞くと、まったく別のことを言っていました。創業以来を支えてきた二人が現場の最前線に立ち続けていて、人が育つ順番が来ない。<strong>二人に原因があったのは事実です。ただ、それは構造の問題でもありました。</strong>役割と責任範囲が決まらないまま、権限がこの二人に集中していた。そして遡れば、管理職の適性を見ないまま部長を置いたのは社長です。<strong>経営理念をつくっても、この形のままでは浸透しません。</strong></dd></div>
+              <div><dt>やったこと</dt><dd>若手の意見を吸い上げ、本人たちが言えないことを私が代わりに伝えました。そのうえで社長に、こう申し上げました。「もっと権限を委譲しながら若手を抜擢して、組織体制を変えていかないと大きくなりませんよ」。</dd></div>
+              <div><dt>その後</dt><dd>権限の持たせ方と役割を組み替え、若手が案件を任される形に変わりました。経営理念づくりは、その後です。</dd></div>
+              <div><dt>やらなかったこと</dt><dd><strong>依頼されたとおりに経営理念をつくること。</strong>つくれば納品はできますが、壁に貼られて終わります。</dd></div>
+            </dl>
+          </li>
+
+          <li class="case">
+            <span class="cn mark">Case 02</span>
+            <h4>構想は、つくるだけでは動かない</h4>
+            <dl>
+              <div><dt>相談されたこと</dt><dd><strong>IT化構想の策定。</strong>生産性を上げ、経営の数字が見えるようにしたい。</dd></div>
+              <div><dt>見えてきたこと</dt><dd>技術の問題ではありませんでした。過去にも構想はつくられていて、そのたびに最後でひっくり返されていた。<strong>本当の論点は、誰が決めるかでした。</strong></dd></div>
+              <div><dt>やったこと</dt><dd>現場と管理部門を回って業務を洗い出し、あるべき姿を一緒に設計しました。そして、<strong>「あの人は反対派だから近づかないほうがいい」と、社長を含むプロジェクトメンバー全員が言っていた役員のところへ、私が一人で会いに行きました。</strong>特別なことはしていません。ざっくばらんに話しただけです。丁寧に話を聞いていただき、最終的に改革への賛同を得ることができました。</dd></div>
+              <div><dt>その後</dt><dd>構想はひっくり返らず、システムの導入まで進みました。</dd></div>
+              <div><dt>やらなかったこと</dt><dd><strong>派閥のラベルで、人を分けること。</strong></dd></div>
+            </dl>
+          </li>
+
+          <li class="case">
+            <span class="cn mark">Case 03</span>
+            <h4>受注が増えて回らない。原因は人手ではなかった</h4>
+            <dl>
+              <div><dt>相談されたこと</dt><dd>工事の受注が急に増えて、いまの体制では回らない。<strong>DXで生産性を上げたい。</strong></dd></div>
+              <div><dt>見えてきたこと</dt><dd>業務を分解していくと、同じ情報を何度も入力し、集計し直していました。工事ごとの売上と原価は、締めてみないと分からない。<strong>足りなかったのは人手ではなく、工事番号を軸にした管理の単位でした。</strong></dd></div>
+              <div><dt>やったこと</dt><dd>工事番号で情報を一元化する形を設計し、システムを選定して導入。あわせて<strong>月次決算を立ち上げ、資金繰りの管理を組み直しました。</strong></dd></div>
+              <div><dt>その後</dt><dd>運用開始から1年たたずに、<strong>管理部門の残業が20%以上減りました。</strong>月次で数字が出るようになり、意思決定が早くなっています。</dd></div>
+              <div><dt>やらなかったこと</dt><dd><strong>私が代わりに業務フローを書くこと。</strong>書き出しは、現場の方にやってもらいました。</dd></div>
+            </dl>
+          </li>
+
+        </ul>
+
+        <p class="muted">企業が特定できる情報は書いていません。業種・規模・数字を含む実績の一覧は、<a href="https://karasawaconsulting.jp/record/" style="color:var(--blue);font-weight:700;">事務所サイトの実績ページ</a>に掲載しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 04 経営について ══════════ -->
+  <section class="sec" id="belief">
+    <div class="wrap sec-grid">
+      <div class="aside">
+        <span class="n mark">04</span>
+        <h2>経営について<br>思っていること</h2>
+      </div>
+      <div class="col rise">
+
+        <p>経営の問題は、表面に出ている現象だけを追いかけても、なかなか解決しません。</p>
+
+        <ul class="chips">
+          <li>売上が上がらない</li>
+          <li>人が育たない</li>
+          <li>会議が機能しない</li>
+          <li>社長が現場の仕事を抱え込んでいる</li>
+        </ul>
+
+        <p>このような話を聞いたとき、私はすぐに「では、こうしましょう」とは言いません。</p>
+
+        <p class="lead">まず、なぜ、そうなっているのか。</p>
+
+        <h3>正解を当てるより、修正できるようにする</h3>
+        <p>経営では、最初から正解が分かっていることばかりではありません。情報を集めても、やってみなければ分からないことがあります。</p>
+        <p>だから私は、すべての情報が揃うまで待つのではなく、<strong>判断に必要な材料が揃ったところで決め、動きながら確かめていく</strong>ことが大切だと考えています。</p>
+        <p>一度で正解を当てることより、<strong>致命的な失敗を避けながら、小さく試し、結果を見て修正できること。</strong></p>
+        <p>そのために、いつまでやるのか、どこまで資源を投じるのか、どの状態になったら見直すのかを、できるだけ先に決めます。</p>
+
+        <h3>精神論ではなく、技術にする</h3>
+        <p>私は、経営もマネジメントも精神論ではなく、できる限り技術にしたいと思っています。</p>
+
+        <ul class="contrast">
+          <li>
+            <span class="x">「もっと主体性を持て」ではなく</span>
+            <span class="arw">→</span>
+            <span class="o">主体的に動ける仕事の渡し方を考える</span>
+          </li>
+          <li>
+            <span class="x">「覚悟を決めろ」ではなく</span>
+            <span class="arw">→</span>
+            <span class="o">決められる条件をつくる</span>
+          </li>
+          <li>
+            <span class="x">「コミュニケーションを増やせ」ではなく</span>
+            <span class="arw">→</span>
+            <span class="o">何を、誰と、どう話すのかを決める</span>
+          </li>
+        </ul>
+
+        <p class="punch">曖昧な言葉を、実際に行動できるところまで落とす。それが、私の仕事です。</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 04 人について ══════════ -->
+  <section class="sec" id="people">
+    <div class="wrap sec-grid">
+      <div class="aside">
+        <span class="n mark">05</span>
+        <h2>人と組織について<br>思っていること</h2>
+      </div>
+      <div class="col rise">
+
+        <h3>人は、違っていて当然</h3>
+        <p>組織を上位2割・中位6割・下位2割で見る考え方があります。ただ、これは相対的に分けているだけです。<strong>下位の2割を切り離しても、組織の問題は解決しません。</strong>下位2割が抜けたら、残った人の中に新たな下位2割ができるだけです。</p>
+        <p>その人を「できない人」と決めつける前に、<strong>強みが活きる役割や、力を発揮できていない理由を見る。</strong>それが、人を預かる側の仕事だと思っています。</p>
+
+        <h3>正論だけでは、人は動かない</h3>
+        <p>感情的な受容は、論理的な受容に先行します。理屈が正しいかどうかより先に、「この人の話なら聞いてもいい」と思えるかどうかが来る。順番を間違えると、正しいことを言っているのに何も動きません。</p>
+        <p>組織も同じです。動かないのは、一人ひとりが分かっていないからではありません。<strong>一人ひとりは分かっているのに、組織としてひとつの方向にならないから動かない。</strong>そこを揃える支援をするのが、私の役割です。</p>
+
+        <h3>人は、適切な期待と機会があれば変わる</h3>
+        <p>20年以上、企業の現場で経営者、管理職、社員の方々と関わる中で、何度もそういう場面を見てきました。だから私は、できていないことを指摘するだけではなく、<strong>その人が次に何をできるようになるかを見る</strong>ようにしています。</p>
+
+        <h3>自分自身の正しさも、疑う</h3>
+        <p>私自身にも、こう思いたくなる瞬間があります。</p>
+        <p class="axiom">自分は正しい。自分は悪くない。自分は優れている。自分は変わりたくない。</p>
+        <p>そのように考える根っこには、自分の未熟さを認めたくないという恐れがある。私は、そう考えています。</p>
+        <p>だから、<strong>相手に変化を求めるときほど、自分の見立てが本当に正しいのかを疑います。</strong>感情ではなく、事実を見るためです。</p>
+
+        <h3>絶対にしないこと</h3>
+        <ul class="never">
+          <li><em>01</em>未経験の領域を、教えずに渡す</li>
+          <li><em>02</em>現場の「分からない」を、個人の能力不足で片づける</li>
+          <li><em>03</em>人前で、恥をかかせる</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 05 キャリア ══════════ -->
+  <section class="sec" id="career">
+    <div class="wrap sec-grid">
+      <div class="aside">
+        <span class="n mark">06</span>
+        <h2>それを裏づける<br>20年以上</h2>
+        <p class="hint">起点は会計です。人・組織から入ったわけではありません。</p>
+      </div>
+      <div class="col rise">
+
+        <h3>キャリアの原点</h3>
+        <p>新入社員のとき、会計の知識もシステム機能も十分に分からないまま、基幹システムの本番フォローをお客様の拠点で1人で担当したことがあります。</p>
+        <p>わからないことは、そのままにできませんでした。簿記を学び、マニュアルを読み込み、実際に使っている人の席まで行って、画面を一緒に見ながら確認しました。</p>
+
+        <p class="punch">そのときに身についたのが、分からないことは自分で調べること。実際の現場を見ること。分かったふりをしないこと。そして、相手の代わりにやって終わらせないこと。</p>
+
+        <p>扱うテーマは、会計から業務改革、IT、経営、組織へと広がりました。<strong>ただ、仕事に向き合うときの基本姿勢は、今も変わっていません。</strong></p>
+
+        <h3>扱ってきた領域</h3>
+        <p class="muted" style="margin-bottom:1.4rem;">この5つを、コンサルティングでも研修でも扱います。関わってきた会社は、従業員5名ほどから300名規模まで。業種は限定していません。</p>
+        <div class="domains">
+          <div class="dom">
+            <span class="di"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h14M3.5 12.5l4-4 3 2.5 5.5-5.5"/><path d="M12.5 5.5h4v4"/></svg></span>
+            <h4>経営戦略</h4>
+            <p>経営計画の策定と実行、事業計画、BtoB営業戦略、経営視点・利益意識の強化。経営顧問として継続的に入ることが多いです。</p>
+          </div>
+          <div class="dom">
+            <span class="di"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="6.5" r="2.4"/><path d="M3 16c0-2.5 2-4.2 4.5-4.2S12 13.5 12 16"/><circle cx="14" cy="7.5" r="2"/><path d="M13 11.9c2.2-.2 4 1.4 4 3.6"/></svg></span>
+            <h4>組織・人材</h4>
+            <p>幹部育成、管理職研修、人事評価・賃金制度の設計と評価者研修、1on1、部下育成、事業承継。家族会議に第三者として入ることもあります。</p>
+          </div>
+          <div class="dom">
+            <span class="di"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="4" r="2"/><circle cx="4.5" cy="15" r="2"/><circle cx="15.5" cy="15" r="2"/><path d="M8.6 5.7L5.6 13M11.4 5.7l3 7.3M6.5 15h7"/></svg></span>
+            <h4>業務プロセス</h4>
+            <p>業務の見える化、業務プロセス改善、間接業務の効率化。現状の業務の可視化から入ります。</p>
+          </div>
+          <div class="dom">
+            <span class="di"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="12" height="15" rx="2"/><path d="M7 6h6M7 9.5h2M11 9.5h2M7 13h2M11 13h2"/></svg></span>
+            <h4>会計</h4>
+            <p>決算早期化、内部統制、原価管理、管理会計。キャリアの起点であり、いまも数字から入ります。</p>
+          </div>
+          <div class="dom">
+            <span class="di"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3.5" width="15" height="10" rx="1.5"/><path d="M10 13.5V16.5M7 16.5h6M6 7h4M6 10h6"/></svg></span>
+            <h4>IT・DX</h4>
+            <p>DX戦略・IT構想の策定から、ERP・基幹システムの選定、RFP作成、ベンダー選定、導入プロジェクトの推進まで。<strong>ITシステムを販売・開発する立場ではないので、発注者側に立って完全中立の立場で支援できます。</strong></p>
+          </div>
+        </div>
+
+        <h3>経歴</h3>
+        <p>20年以上にわたり、業務改革、ITコンサルティング、DX推進支援、経営コンサルティングに携わってきました。</p>
+
+        <p>キャリアの前半は、大手企業を中心に、会計システム・原価管理システムの導入、ERP導入、IFRS影響度調査、決算早期化に向けた業務改革、内部統制支援、基幹システムの構想策定などを担当しました。<strong>数字とシステムを起点に、業務と経営を見る経験を重ねてきました。</strong></p>
+
+        <p><strong>2012年以降は、中堅・中小企業支援へと活動領域を広げました。</strong>大手IT企業において、中堅・中小企業向けITコンサルティング事業の企画・立ち上げに携わり、営業・提案からプロジェクト推進まで一貫して担当しました。その後は、コンサルティング組織のマネージャーとして、<strong>通算7年間</strong>、メンバー育成、案件管理、評価・フィードバックに携わりました。</p>
+
+        <p><strong>2022年4月、在職中に唐澤経営コンサルティング事務所を開業。2024年9月に独立し、現在は中堅・中小企業を中心に、経営・組織・業務・会計・ITを横断した支援を行っています。</strong></p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 06 発信 ══════════ -->
+  <section class="sec" id="media">
+    <div class="wrap sec-grid">
+      <div class="aside">
+        <span class="n mark">07</span>
+        <h2>書いているところ、<br>話しているところ</h2>
+        <p class="hint">読み手に合わせて置き場所を分けているだけで、出どころは1つです。</p>
+      </div>
+      <div class="col rise">
+        <ul class="banners">
+          <li><a href="https://karasawaconsulting.jp/column/">
+            <img src="images/bn-column.jpg" alt="経営コラム｜中堅・中小企業の経営の論点を、1本ずつ" width="1500" height="375" loading="lazy" decoding="async"></a></li>
+          <li><a href="https://note.com/karasawaconsul">
+            <img src="images/bn-note.jpg" alt="note｜失敗したこと、考え方が変わったきっかけ" width="1500" height="375" loading="lazy" decoding="async">
+            <span class="svc nt" aria-hidden="true"><b>note</b></span></a></li>
+          <li><a href="https://www.youtube.com/@karasawaconsul">
+            <img src="images/bn-youtube.jpg" alt="YouTube 従業員30名からの実践経営学｜1本7〜15分" width="1500" height="375" loading="lazy" decoding="async">
+            <span class="svc yt" aria-hidden="true"><svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M 27.4 3.55 A 3.5 3.5 0 0 0 24.94 1.07 C 22.76 0.5 14 0.5 14 0.5 S 5.24 0.5 3.06 1.07 A 3.5 3.5 0 0 0 0.6 3.55 C 0.04 5.66 0.04 10 0.04 10 s 0 4.34 0.56 6.45 a 3.5 3.5 0 0 0 2.46 2.48 C 5.24 19.5 14 19.5 14 19.5 s 8.76 0 10.94 -0.57 a 3.5 3.5 0 0 0 2.46 -2.48 C 27.96 14.34 27.96 10 27.96 10 s 0 -4.34 -0.56 -6.45 Z"/><path fill="#FBFCFD" d="M11.5 14 18.5 10 11.5 6Z"/></svg></span></a></li>
+          <li><a href="https://open.spotify.com/show/7ocqmOkZ8To1KKcHTn5qW9">
+            <img src="images/bn-radio.jpg" alt="音声配信 明日が変わる経営ラジオ〜社長が動く瞬間〜" width="1500" height="375" loading="lazy" decoding="async">
+            <span class="svc sp" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1ED760"/><g fill="none" stroke="#FBFCFD" stroke-linecap="round"><path d="M6.2 8.9c4-1.1 9.4-.8 12.7 1.3" stroke-width="2.1"/><path d="M7.1 12.6c3.3-.9 7.8-.6 10.6 1.1" stroke-width="1.8"/><path d="M8 16.2c2.6-.7 6.1-.5 8.3.9" stroke-width="1.5"/></g></svg></span></a></li>
+          <li id="book">
+            <img src="images/bn-book.jpg" alt="書籍 プレイングマネジャーの「任せ」のルール｜2026年10月 発行予定" width="1500" height="375" loading="lazy" decoding="async"></li>
+        </ul>
+
+        <p class="muted" style="margin-bottom:2.6rem;">記事の執筆・監修、取材もお受けしています。</p>
+
+        <h3>公的機関での登壇</h3>
+        <ul class="reads">
+          <li><div class="flat">
+            <span class="rn mark">01</span><span class="rt">品川区主催「ツール導入を成功させるための業務の見える化と課題整理セミナー」<small>2026年</small></span><span class="rm">講師</span></div></li>
+          <li><div class="flat">
+            <span class="rn mark">02</span><span class="rt">愛知県主催 DX Days 2026「中小企業の競争力を高めるDX戦略の立て方」<small>2026年</small></span><span class="rm">講師</span></div></li>
+          <li><div class="flat">
+            <span class="rn mark">03</span><span class="rt">公益財団法人あいち産業振興機構主催「ゼロから始める！経営者のためのDX戦略研修」<small>2025年度</small></span><span class="rm">講師</span></div></li>
+          <li><div class="flat">
+            <span class="rn mark">04</span><span class="rt">公益財団法人あいち産業振興機構主催「経営層・支援担当者向け デジタル人材育成研修」<small>2024年度</small></span><span class="rm">講師</span></div></li>
+          <li><div class="flat">
+            <span class="rn mark">05</span><span class="rt">中小企業庁主催「法定経営指導員業務に関する実務講習」<small>DX分野／東京都・香川県・広島県／2022年</small></span><span class="rm">講師</span></div></li>
+        </ul>
+
+        <h3>他媒体での執筆・監修・講座</h3>
+        <ul class="reads">
+          <li><a href="https://www.ejinzai.jp/account/webseminar/management/business_creation/">
+            <span class="rn mark">01</span><span class="rt">会計事務所の強みを活かす！DXコンサルティング事業の立ち上げと安定収益化戦略<small>株式会社ビズアップ総研「e人材」／本編・深化編／2026年</small></span><span class="rm">eラーニング</span></a></li>
+          <li><a href="https://digi-mado.jp/category/business/production-control-system/">
+            <span class="rn mark">02</span><span class="rt">生産管理システムの比較・選び方<small>デジタル化の窓口（株式会社クリエイティブバンク）／2025年</small></span><span class="rm">記事監修</span></a></li>
+          <li><a href="https://article.ejinzai.jp/training-labo/ojt-strategy/">
+            <span class="rn mark">03</span><span class="rt">新人が伸びる会計事務所は何をしているのか？　〜OJTに「戦略」を持つという選択〜<small>税理士.ch（株式会社ビズアップ総研）／2025年</small></span><span class="rm">取材</span></a></li>
+          <li><div class="flat">
+            <span class="rn mark">04</span><span class="rt">中小企業のコスト削減<small>東日本電信電話株式会社（NTT東日本）特設サイト／制作：株式会社日経BPコンサルティング／2025年</small></span><span class="rm">取材・会員限定</span></div></li>
+        </ul>
+
+        <h3>唐澤智哉を知るなら、この3本</h3>
+        <ul class="reads">
+          <li><a href="https://note.com/karasawaconsul/n/n219f6590898d">
+            <span class="rn mark">01</span><span class="rt">大企業の「あるべき論」が、中小企業で通用しなかった理由<small>私の仕事の仕方が変わった原点</small></span><span class="rm">note</span></a></li>
+          <li><a href="https://note.com/karasawaconsul/n/nc450c88052ea">
+            <span class="rn mark">02</span><span class="rt">社内対立を、どう前に進めるか<small>立場の違う人たちの間に入った支援事例</small></span><span class="rm">note</span></a></li>
+          <li><a href="https://note.com/karasawaconsul/n/nfae022b46b2a">
+            <span class="rn mark">03</span><span class="rt">システム導入は「最後」でいい<small>業務・会計・ITをどう見ているか</small></span><span class="rm">note</span></a></li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 07 依頼 ══════════ -->
+  <section class="sec" id="contact">
+    <div class="wrap sec-grid">
+      <div class="aside">
+        <span class="n mark">08</span>
+        <h2>ご依頼</h2>
+        <p class="hint">企画段階からのご相談も歓迎します。</p>
+      </div>
+      <div class="col rise">
+        <ul class="asks">
+          <li>経営のご相談（初回60分・無料）</li>
+          <li>講演・セミナー（企業主催／自治体・支援機関主催）</li>
+          <li>企業研修：階層別（新入社員／中堅社員／管理職／経営層）</li>
+          <li>企業研修：テーマ別（会計・管理会計／ロジカルシンキング／プレゼンテーション／ファシリテーション／評価者研修／業務改善・IT ほか）</li>
+          <li>eラーニング・動画講座の収録</li>
+          <li>記事の執筆・監修</li>
+          <li>取材・コメント</li>
+        </ul>
+        <p class="muted">ご相談内容と、ご希望の時期・形式をお知らせください。ご予算が決まっている場合は、あわせてお知らせください。内容を確認したうえで、進め方をご相談させていただきます。</p>
+        <p style="margin-top:2rem;">
+          <a class="btn btn-solid" href="https://karasawaconsulting.jp/consulting/">唐澤に相談・依頼する
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="fname">唐澤 智哉</div>
+        <p class="frole mark">Tomoya Karasawa ／ Management Consultant</p>
+      </div>
+      <nav>
+        <a href="https://karasawaconsulting.jp/">唐澤経営コンサルティング事務所</a>
+        <a href="https://note.com/karasawaconsul">note</a>
+        <a href="https://www.youtube.com/@karasawaconsul">YouTube</a>
+        <a href="https://open.spotify.com/show/7ocqmOkZ8To1KKcHTn5qW9">経営ラジオ</a>
+      </nav>
+    </div>
+    <div class="btm">© 唐澤経営コンサルティング事務所</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    nav.classList.toggle('stuck', window.scrollY > 8);
+    nav.classList.toggle('named', window.scrollY > 340);   // 名前が画面から出てから出す
+  };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // いま見ている節に、ナビの色を合わせる
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+  var targets = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  var setHere = function(id){
+    links.forEach(function(a){ a.classList.toggle('here', a.getAttribute('href') === '#' + id); });
+  };
+  if ('IntersectionObserver' in window) {
+    var seen = {};
+    var so = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ seen[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0; });
+      var best = null, top = 0;
+      Object.keys(seen).forEach(function(k){ if (seen[k] > top) { top = seen[k]; best = k; } });
+      setHere(best);
+    }, {rootMargin:'-20% 0px -55% 0px', threshold:[0, .25, .5, 1]});
+    targets.forEach(function(t){ if (t && t.id) so.observe(t); });
+  }
+
+  // 狭い画面のメニューは、行き先を押したら閉じる
+  var mm = document.querySelector('.mmenu');
+  if (mm) {
+    Array.prototype.forEach.call(mm.querySelectorAll('a'), function(a){
+      a.addEventListener('click', function(){ mm.removeAttribute('open'); });
+    });
+  }
+
+  var items = document.querySelectorAll('.rise');
+  if(!('IntersectionObserver' in window) ||
+     window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+  items.forEach(function(el,i){ el.style.transitionDelay = (i%3)*70 + 'ms'; io.observe(el); });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://tomoya.karasawaconsulting.jp/#person",
+    "name": "唐澤智哉",
+    "alternateName": ["唐澤 智哉", "からさわ ともや", "Tomoya Karasawa"],
+    "url": "https://tomoya.karasawaconsulting.jp/",
+    "image": "https://tomoya.karasawaconsulting.jp/images/portrait.jpg",
+    "jobTitle": "経営コンサルタント",
+    "description": "会社の中に入らないと、見えないことがある。役員会に出て、管理職と話し、現場まで行く。経営計画・組織・人材・業務・ITを横断して、中堅・中小企業の経営を経営者と一緒に考える経営コンサルタント。",
+    "knowsAbout": [
+      "経営コンサルティング","経営計画の策定","組織開発","管理職育成","事業承継",
+      "業務改革","DX","管理会計","IT導入の発注者側支援"
+    ],
+    "hasCredential": [
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"国家資格","name":"中小企業診断士"},
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"国家資格","name":"ITストラテジスト"},
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"国家資格","name":"プロジェクトマネージャ"}
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "唐澤経営コンサルティング事務所",
+      "url": "https://karasawaconsulting.jp/"
+    },
+    "sameAs": [
+      "https://karasawaconsulting.jp/",
+      "https://note.com/karasawaconsul",
+      "https://www.youtube.com/@karasawaconsul",
+      "https://www.youtube.com/@karasawaconsulting",
+      "https://open.spotify.com/show/7ocqmOkZ8To1KKcHTn5qW9"
+    ]
+  }
+}
+</script>
+
+</body>
+</html>
