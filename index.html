@@ -24,6 +24,18 @@
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
+<!-- Google Analytics 4（プロパティ「tomoya.karasawaconsulting.jp（個人サイト）」／549219804
+     測定ID G-5EW9BY5TW0・2026-08-10 設置）
+     ★ 事務所サイトの G-67W17MTZF0 とは別プロパティ。データは混ざらない。
+     Clarity と役割が違う：GA4＝どこから来たか（参照元）／Clarity＝ページ内で何をしたか -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5EW9BY5TW0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5EW9BY5TW0');
+</script>
+
 <!-- Microsoft Clarity（プロジェクト「唐澤智哉 個人サイト」／ID xzv70x8pl1・2026-08-10 設置）
      ヒートマップ・スクロール深度・録画を取る。無料・無制限。
      ★ 機密コンテンツは既定でマスクされる。★ GA4 は入れていない（流入元は Search Console で足りる） -->
@@ -41,7 +53,11 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
 <style>
 /* ═══════════════════════════════════════════════════════════
-   唐澤智哉 ── 個人ハブページ  第56稿
+   唐澤智哉 ── 個人ハブページ  第57稿
+   第57稿（2026-08-10）：GA4 を追加（測定ID G-5EW9BY5TW0／プロパティ 549219804）。
+     ★ 事務所サイトの G-67W17MTZF0 とは別プロパティ。既存データには一切触れていない。
+     役割分担：GA4＝どこから来たか（参照元・チャネル）／Clarity＝ページ内で何をしたか。
+   第56稿（2026-08-10）
    第56稿（2026-08-10）：Microsoft Clarity を設置（プロジェクト `xzv70x8pl1`）。
      それまで計測タグは0件で、誰が来たかも、どこまで読まれたかも分からなかった。
      同日、Search Console の登録・サイトマップ送信・インデックス登録リクエストも完了。
