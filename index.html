@@ -30,19 +30,34 @@
 
 <style>
 /* ═══════════════════════════════════════════════════════════
-   唐澤智哉 ── 個人ハブページ  第49稿
+   唐澤智哉 ── 個人ハブページ  第51稿
+   第51稿（2026-08-09）：本人の赤入れ2件。言葉を、実際にやっていることに合わせた。
+     ・「部門長と一緒に、部門方針とKPIまで分解する」
+       → 「管理職と一緒に、組織方針とKPI、目標まで分解する」
+       ※「部門方針」は導線カード①と領域タイル「経営戦略」にも同じ語で入っていたので、
+         そちらも「組織方針とKPI・目標」に揃えた。★本人指示は本文1行のみ。違えば戻す
+     ・マネジメント経験 →「メンバー育成、評価・フィードバック、案件推進、組織運営」
+       （信頼帯と経歴の2か所。「案件管理」→「案件推進」、「組織運営」を追加）
+   第50稿（2026-08-09）
+   第50稿（2026-08-09）：稿ごとの申し送りを、本番HTMLで1件ずつ数え直して見つけた2件。
+     ・信頼帯の「公的機関での役割」→「公職」。18:46 に本人指示で「公職」に直したものが、
+       20分後の別コミット（9300efd）で外部レビュー由来の語に巻き戻っていた。★同じ語を3度触っている。
+       本人が何を名乗るかは、外部レビューではなく本人が決める。ここは以後さわらない。
+     ・デスクトップのナビだけ「ご依頼」のままだった。第45稿で「ご相談・ご依頼」に
+       統一したはずが、モバイルメニュー／節見出し／ヒーローのボタンの3か所しか入っていなかった。
+     ・信頼帯の「群」を、行間で分けた（色は足していない。詳細は .trust b + b のコメント）。
+   第49稿（2026-08-09）：信頼帯の「経験」から、マネジメントの中身（案件管理）が落ちていた。
+     「育成と評価」だけでは、人事の担当に見えて、組織を回してきた経験に読めない。
    第48稿（2026-08-09）：「実際に何をしているか」がページのどこにも無かった。
      本文は姿勢（聞く・分ける・間に入る）ばかりで、戦略立案・経営計画・部門方針・
      幹部会議／部門長会議／役員会・コーチングが1行も無い、と本人指摘。
      裏づけは『パートナー型経営コンサルティングのご提案』Slide 10・12・14。
      ・02「私の仕事」の冒頭に「継続して、会社の中に入る」を新設
      ・導線カード①／領域タイル「経営戦略」「組織・人材」にも同じ中身を通した
-   第47稿（2026-08-09）
    第47稿（2026-08-09）：信頼帯が4セル中3セルITに寄っていて、研修・人材育成が1行も無かった。
      ・「公的機関での登壇」→「登壇・研修」。階層別研修（新入社員〜経営層）と幹部育成・評価者研修を追加
      ・経験欄を、ページ自身の5領域の言い方（経営戦略／組織・人材／業務プロセス／会計／IT）に戻した
      ・「ERP導入から」を先頭から外し、着地を「経営顧問・幹部育成まで」に
-   第46稿（2026-08-09）
    第46稿（2026-08-09）：押せる／押せないを見た目で分けた。
      ルール ＝「枠のある箱は押せる。枠がなく下罫線だけのものは、読むだけ」。
      ・発信の .reads a に青系1px枠／.reads .flat は背景を外して下罫線だけに
@@ -188,7 +203,14 @@ a:focus-visible,summary:focus-visible{
 .trust .cat{display:block;font-size:.7rem;font-weight:700;letter-spacing:.18em;
   color:var(--blue);margin-bottom:.5rem;}
 .trust b{display:block;font-size:.95rem;font-weight:700;line-height:1.65;}
-.trust b ~ b{margin-top:.65rem;}
+/* ★ 2026-08-09｜信頼帯が「のっぺり」して見える原因は、太さでも色でもなく、
+   「群の切れ目」と「群の中」が同じ .65rem だったこと。
+   例：資格の欄は〈中小企業診断士／国家資格〉と〈ITストラテジスト・プロジェクトマネージャ／
+   情報処理技術者試験〉の2群だが、ITストラテジストとプロジェクトマネージャの間隔も、
+   群と群の間隔も同じだったため、どの説明がどれに掛かるのか読めなかった。
+   → 群の中は詰め（.2rem）、説明のあとに来る＝新しい群の頭は空ける（.85rem）。色は足していない。 */
+.trust b + b{margin-top:.2rem;}
+.trust span:not(.cat) + b{margin-top:.85rem;}
 .trust span{display:block;margin-top:.15rem;color:var(--ink-3);font-size:.83rem;line-height:1.7;}
 
 /* ═══ 導線 ═══ */
@@ -442,7 +464,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       <li><a href="#people">人と組織</a></li>
       <li><a href="#career">経歴</a></li>
       <li><a href="#media">発信</a></li>
-      <li><a href="#contact">ご依頼</a></li>
+      <li><a href="#contact">ご相談・ご依頼</a></li>
     </ul>
     <details class="mmenu">
       <summary>MENU</summary>
@@ -500,7 +522,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <span>情報処理技術者試験（経済産業省）</span>
       </div>
       <div>
-        <span class="cat">公的機関での役割</span>
+        <span class="cat">公職</span>
         <b>中小企業アドバイザー（経営支援）</b>
         <span>独立行政法人中小企業基盤整備機構</span>
         <b>ビジネスサポートサービス専門家</b>
@@ -520,7 +542,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <b>経営戦略、組織・人材、業務プロセス、会計、IT を横断して20年以上</b>
         <span>大手企業の業務改革・システム導入から、中堅・中小企業の経営顧問・幹部育成まで</span>
         <b>組織マネジメント経験 7年</b>
-        <span>コンサルティング組織のマネージャーとして、案件管理・メンバーの育成・評価とフィードバック</span>
+        <span>コンサルティング組織のマネージャーとして、メンバー育成、評価・フィードバック、案件推進、組織運営</span>
       </div>
     </div>
   </section>
@@ -531,7 +553,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       <a class="route rise" href="#contact">
         <span class="rn mark">Consulting</span>
         <h3>経営に関するご相談</h3>
-        <p>経営戦略と経営計画の策定から、部門方針とKPIへの落とし込み、月次の経営会議・部門長会議まで。経営顧問として継続して入ります。<strong>初回60分は無料です。</strong>問題意識はあるものの、課題の優先順位が定まっていない段階でもご相談いただけます。</p>
+        <p>経営戦略と経営計画の策定から、組織方針とKPI・目標への落とし込み、月次の経営会議・部門長会議まで。経営顧問として継続して入ります。<strong>初回60分は無料です。</strong>問題意識はあるものの、課題の優先順位が定まっていない段階でもご相談いただけます。</p>
         <span class="go">相談する<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
       </a>
       <a class="route rise" href="#contact">
@@ -604,7 +626,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <ul class="beat">
           <li>経営者と一緒に、ビジョンと経営戦略を言葉にする。</li>
           <li>中期経営計画に落とし、数値計画と行動計画をつくる。</li>
-          <li>部門長と一緒に、部門方針とKPIまで分解する。</li>
+          <li>管理職と一緒に、組織方針とKPI、目標まで分解する。</li>
           <li>経営方針発表会で、社長・役員・部門長が自分の言葉で社員に話す。</li>
           <li>月次の経営会議・部門長会議に出て、PDCAを回す。</li>
           <li>経営者と幹部のコーチングをする。必要なら研修もやる。</li>
@@ -804,7 +826,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
     </div>
   </section>
 
-  <!-- ══════════ 04 人について ══════════ -->
+  <!-- ══════════ 05 人と組織 ══════════ -->
   <section class="sec" id="people">
     <div class="wrap sec-grid">
       <div class="aside">
@@ -842,7 +864,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
     </div>
   </section>
 
-  <!-- ══════════ 05 キャリア ══════════ -->
+  <!-- ══════════ 06 キャリア ══════════ -->
   <section class="sec" id="career">
     <div class="wrap sec-grid">
       <div class="aside">
@@ -866,7 +888,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
           <div class="dom">
             <span class="di"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h14M3.5 12.5l4-4 3 2.5 5.5-5.5"/><path d="M12.5 5.5h4v4"/></svg></span>
             <h4>経営戦略</h4>
-            <p>経営ビジョンと経営戦略の明確化、中期経営計画の策定と実行、部門方針とKPIへの落とし込み、事業計画、BtoB営業戦略。経営顧問として継続的に入り、月次の経営会議・部門長会議でPDCAを回します。</p>
+            <p>経営ビジョンと経営戦略の明確化、中期経営計画の策定と実行、組織方針とKPI・目標への落とし込み、事業計画、BtoB営業戦略。経営顧問として継続的に入り、月次の経営会議・部門長会議でPDCAを回します。</p>
           </div>
           <div class="dom">
             <span class="di"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="6.5" r="2.4"/><path d="M3 16c0-2.5 2-4.2 4.5-4.2S12 13.5 12 16"/><circle cx="14" cy="7.5" r="2"/><path d="M13 11.9c2.2-.2 4 1.4 4 3.6"/></svg></span>
@@ -896,7 +918,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
 
         <p>キャリアの前半は、大手企業を中心に、会計システム・原価管理システムの導入、ERP導入、IFRS影響度調査、決算早期化に向けた業務改革、内部統制支援、基幹システムの構想策定などを担当しました。<strong>数字とシステムを起点に、業務と経営を見る経験を重ねてきました。</strong></p>
 
-        <p><strong>2012年以降は、中堅・中小企業支援へと活動領域を広げました。</strong>大手IT企業において、中堅・中小企業向けITコンサルティング事業の企画・立ち上げに携わり、営業・提案からプロジェクト推進まで一貫して担当しました。その後は、コンサルティング組織のマネージャーとして、<strong>通算7年間</strong>、メンバー育成、案件管理、評価・フィードバックに携わりました。</p>
+        <p><strong>2012年以降は、中堅・中小企業支援へと活動領域を広げました。</strong>大手IT企業において、中堅・中小企業向けITコンサルティング事業の企画・立ち上げに携わり、営業・提案からプロジェクト推進まで一貫して担当しました。その後は、コンサルティング組織のマネージャーとして、<strong>通算7年間</strong>、メンバー育成、評価・フィードバック、案件推進、組織運営に携わってきました。</p>
 
         <p><strong>2022年4月、在職中に唐澤経営コンサルティング事務所を開業。2024年9月に独立し、現在は中堅・中小企業を中心に、経営・組織・業務・会計・ITを横断した支援を行っています。</strong></p>
 
@@ -904,7 +926,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
     </div>
   </section>
 
-  <!-- ══════════ 06 発信 ══════════ -->
+  <!-- ══════════ 07 発信 ══════════ -->
   <section class="sec" id="media">
     <div class="wrap sec-grid">
       <div class="aside">
@@ -976,7 +998,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
     </div>
   </section>
 
-  <!-- ══════════ 07 依頼 ══════════ -->
+  <!-- ══════════ 08 ご相談・ご依頼 ══════════ -->
   <section class="sec" id="contact">
     <div class="wrap sec-grid">
       <div class="aside">
