@@ -30,7 +30,7 @@
 
 <style>
 /* ═══════════════════════════════════════════════════════════
-   唐澤智哉 ── 個人ハブページ  第42稿
+   唐澤智哉 ── 個人ハブページ  第43稿
    本文は本人原稿＋2026-08-08 の赤入れ47件を反映。変動する数値は載せない。
    色：事務所ブランド（濃紺 #0A1C49 ／ 淡青灰 #ECF1F2）
    ═══════════════════════════════════════════════════════════ */
@@ -329,6 +329,10 @@ a:focus-visible,summary:focus-visible{
 .reads .rt{font-size:1rem;font-weight:700;line-height:1.7;}
 .reads .rt small{display:block;color:var(--ink-3);font-size:.79rem;font-weight:500;margin-top:.1rem;}
 .reads .rm{color:var(--ink-3);font-size:.79rem;font-weight:500;letter-spacing:.04em;white-space:nowrap;}
+/* ★ 押せるものにだけ矢印を出す。読ませるだけの .flat には出さない */
+.reads a .rm::after{content:"→";margin-left:.5em;color:var(--blue);font-weight:700;
+  display:inline-block;transition:transform .25s var(--ease);}
+.reads a:hover .rm::after{transform:translateX(3px);}
 .reads .flat{display:grid;grid-template-columns:2.6rem 1fr auto;gap:1.3rem;align-items:baseline;
   padding:1.35rem 1.5rem;border-radius:var(--r);background:var(--tint);}
 @media (max-width:640px){
@@ -472,7 +476,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       <a class="route rise" href="#contact">
         <span class="rn mark">Speaking</span>
         <h3>講演・企業研修</h3>
-        <p>対象は、新入社員から経営層まで階層を問いません。階層別のほか、会計やロジカルシンキングなど、テーマ別の研修も承ります。</p>
+        <p>新入社員から管理職・経営層までの階層別研修、会計・ロジカルシンキング・DXなどのテーマ別研修を行っています。経営やDX、組織づくりをテーマとした講演・セミナーにも登壇しています。</p>
         <span class="go">依頼する<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
       </a>
       <a class="route rise" href="#media">
@@ -516,7 +520,9 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
 
         <p class="muted">どこへ向かうか、誰が担うか、どう回すか、どう測るか、何で支えるか。<strong>問いはそれぞれ違います。ただし、切り離すことはできません。</strong></p>
 
-        <p>私が専門を一つに絞っていないのは、<strong>会社の問題は一つの専門だけでは解決しないことが多いからです。</strong>一つの領域だけを直すと、たいてい別の領域で詰まります。</p>
+        <p>私が専門を一つに絞っていないのは、<strong>経営の問題は、組織、業務、会計、ITなどが互いにつながって起きていることが多いからです。</strong>一つの領域だけを最適化しても、会社全体としては別のところにひずみが出ます。</p>
+
+        <p>そして、<strong>中堅・中小企業では、課題ごとに何人もの専門家を入れることが現実的とは限りません。</strong>だから私は、経営全体を見渡しながら、<strong>自分で扱えるところは自分で扱い、必要に応じて専門家ともつなぐ。</strong>そういう立ち位置でいたいと思っています。</p>
       </div>
     </div>
   </section>
@@ -532,14 +538,16 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       <div class="col rise">
 
         <h3>まず、話を聞く</h3>
-        <p><strong>言いにくいことを扱うには、順序があります。</strong>私が最初にするのは、話すことではなく、聞くことです。</p>
+        <p><strong>言いにくいことを扱うにも、順序があります。</strong>まず、相手の話を聞く。ただし、聞いたことをそのまま受け取るのではなく、<strong>自分なりに考え、仮説を立てる。</strong>そして現場へ行き、自分の目で確かめます。</p>
 
         <ul class="beat">
-          <li>社長にも聞く。</li>
-          <li>役員にも聞く。</li>
-          <li>管理職にも聞く。</li>
-          <li>そして、現場まで自分の目で行って確かめる。</li>
+          <li>社長の話を聞く。</li>
+          <li>役員や管理職の話を聞く。</li>
+          <li>現場で働く人の話を聞く。</li>
+          <li>実際の仕事を、自分の目で見る。</li>
         </ul>
+
+        <p>そのうえで、<strong>聞いたことと見たことがつながるのかを、自分の仮説と突き合わせます。</strong></p>
 
         <figure class="shot lst">
           <img src="images/listening.jpg" alt="会議のテーブルで、相手の話を聞いているところ" width="1200" height="800" loading="lazy" decoding="async">
@@ -559,18 +567,23 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
           <li>課題は、そのギャップを埋めるために、いま優先して取り組むテーマ。</li>
         </ul>
         <p>経営資源には限りがあります。だから、表面化した問題すべてを一気に解決することはできません。<strong>原因を分け、影響を見て、どこから手をつけるかを決めていきます。</strong></p>
-        <p>そして、<strong>わからないことは、分ける。</strong>分けないまま考えていると、わからなくなります。</p>
+        <p>複雑な問題ほど、そのまま考えようとすると、<strong>何が分からないのかさえ分からなくなります。</strong></p>
+        <p>だから、問題と原因を分ける。人と仕組みを分ける。事実と解釈を分ける。影響の大きいものと小さいものを分ける。</p>
+        <p class="punch">わからないことは、分ける。</p>
+        <p>分けていくと、どこを確かめ、何から手をつければいいのかが見えてきます。</p>
 
         <figure class="shot wb">
           <img src="images/whiteboard.jpg" alt="ホワイトボードに、現状と目指すもののギャップを問題として書き出しているところ" width="1800" height="900" loading="lazy" decoding="async">
           <figcaption>現状と、目指すもの。その差が「問題」で、そこから論点を立てる。ここを飛ばすと、打ち手だけが増えていきます。</figcaption>
         </figure>
 
-        <h3>唐澤智哉を介すと、着地点が見えることがある</h3>
-        <p>立場が違えば、見え方が違います。会長と社長、社長と管理職、管理職と現場、部門どうし。<strong>取締役の中でも違います。</strong></p>
+        <h3>私が間に入ると、着地点が見えることがある</h3>
+        <p>立場が違えば、見え方が違います。会長と社長、社長と管理職、管理職と現場、部門どうし。<strong>同じ取締役会の中でも、立場が違えば見えているものは違います。</strong></p>
         <p>やっかいなのは、対立しているときではありません。<strong>同じ目的で話しているのに、認識だけがずれているとき</strong>です。本人たちに、ずれている自覚がありません。</p>
         <p>DX構想策定のコンサルティングを推進したとき、2つの部門の部長が対立して、要件が決まらなくなったことがあります。両方から聞くと、<strong>どちらも「顧客満足度を上げる」という目的は同じ</strong>で、ずれていたのはそのアプローチだけでした。目的は同じであること、ずれている部分はどこかを、ホワイトボードに並べて書きながら整理していくと、両方が「確かにそうだ」と言いました。</p>
-        <p>役員会では、こういうこともあります。<strong>社長は取締役に直接意見を言えるけれど、取締役は社長に言えない。</strong>そこで取締役は私に意見を言い、私がそれを社長に渡します。同じ会議室にいるのに、直接は話さない。</p>
+        <p>役員会では、こんなこともあります。<strong>取締役が、社長に直接は言いにくい意見を、私のほうを見ながら話す。</strong></p>
+        <p>私は、それをそのまま伝言しません。<strong>自分なりに論点を整理し、必要であれば自分の意見も加えて、社長に問いかけます。</strong>すると、取締役から社長へ直接ぶつけるのではなく、<strong>第三者から出された経営の論点</strong>として扱えます。</p>
+        <p>同じ会議室にいても、立場が違えば直接は言えないことがあります。<strong>私が間にいることで、話せることがあります。</strong></p>
 
         <p class="punch">人はみんな違う。その当たり前の前提に立つと、それぞれが納得できる着地点が見えてくることがあります。私は、そうやって立場の違う人たちの間に入り、着地点を探すということを繰り返してきました。</p>
 
@@ -624,7 +637,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
             <dl>
               <div><dt>相談されたこと</dt><dd>新規事業で会社をもっと大きくしたい。ただ、いまの組織のままでは難しい。だから<strong>経営理念をつくって、社内に浸透させたい</strong>。</dd></div>
               <div><dt>見えてきたこと</dt><dd>新しく採用した課長や若手から話を聞くと、まったく別のことを言っていました。創業以来を支えてきた二人が現場の最前線に立ち続けていて、人が育つ順番が来ない。<strong>二人に原因があったのは事実です。ただ、それは構造の問題でもありました。</strong>役割と責任範囲が決まらないまま、権限がこの二人に集中していた。そして遡れば、管理職の適性を見ないまま部長を置いたのは社長です。<strong>経営理念をつくっても、この形のままでは浸透しません。</strong></dd></div>
-              <div><dt>やったこと</dt><dd>若手の意見を吸い上げ、本人たちが言えないことを私が代わりに伝えました。そのうえで社長に、こう申し上げました。「もっと権限を委譲しながら若手を抜擢して、組織体制を変えていかないと大きくなりませんよ」。</dd></div>
+              <div><dt>やったこと</dt><dd><strong>社長に、これから会社を担ってほしい次世代のリーダー候補を選んでもらい、一人ひとりから話を聞きました。</strong>出てきた意見を論点として整理し、本人たちからは言いにくいことも含めて、私から社長に伝えました。そのうえで、こう申し上げました。「もっと権限を委譲しながら若手を抜擢して、組織体制を変えていかないと大きくなりませんよ」。</dd></div>
               <div><dt>その後</dt><dd>権限の持たせ方と役割を組み替え、若手が案件を任される形に変わりました。経営理念づくりは、その後です。</dd></div>
               <div><dt>やらなかったこと</dt><dd><strong>依頼されたとおりに経営理念をつくること。</strong>つくれば納品はできますが、壁に貼られて終わります。</dd></div>
             </dl>
