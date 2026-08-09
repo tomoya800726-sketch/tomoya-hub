@@ -30,8 +30,11 @@
 
 <style>
 /* ═══════════════════════════════════════════════════════════
-   唐澤智哉 ── 個人ハブページ  第44稿
+   唐澤智哉 ── 個人ハブページ  第45稿
    本文は本人原稿＋2026-08-08 の赤入れ47件を反映。変動する数値は載せない。
+   第45稿（2026-08-09）：外部レビュー14件のうち11件を反映＋見出しの階層差を広げた。
+     ★ Case01 の事実誤り（「社長にリーダー候補を選んでもらった」）を一次資料に当て直して撤回。
+     ★「絶対にしないこと」3点は一次資料（karasawalog/origin.md）そのもの。本人判断待ちのため変更していない。
    色：事務所ブランド（濃紺 #0A1C49 ／ 淡青灰 #ECF1F2）
    ═══════════════════════════════════════════════════════════ */
 
@@ -99,6 +102,13 @@ a:focus-visible,summary:focus-visible{
 .nav ul a.here{color:var(--blue);}
 .nav ul a.here::after{transform:scaleX(1);transform-origin:left;}
 .mmenu ul a.here{color:var(--blue);background:var(--tint);}
+/* ★ ナビ8個のうち、行動を起こす1個だけ形を変える（下線ではなく枠）。派手にはしない */
+.nav ul.deskmenu a[href="#contact"]{color:var(--navy);border:1px solid var(--navy);
+  border-radius:6px;padding:.4rem .8rem .45rem;
+  transition:background .25s var(--ease),color .25s var(--ease);}
+.nav ul.deskmenu a[href="#contact"]::after{display:none;}
+.nav ul.deskmenu a[href="#contact"]:hover,
+.nav ul.deskmenu a[href="#contact"].here{background:var(--navy);color:#fff;}
 @media (max-width:1100px){ .nav ul.deskmenu{display:none;} }
 @media (min-width:1101px){ .mmenu{display:none;} }
 
@@ -163,7 +173,7 @@ a:focus-visible,summary:focus-visible{
   color:var(--blue);margin-bottom:.5rem;}
 .trust b{display:block;font-size:.95rem;font-weight:700;line-height:1.65;}
 .trust b ~ b{margin-top:.65rem;}
-.trust span{display:block;margin-top:.15rem;color:var(--ink-3);font-size:.8rem;line-height:1.7;}
+.trust span{display:block;margin-top:.15rem;color:var(--ink-3);font-size:.83rem;line-height:1.7;}
 
 /* ═══ 導線 ═══ */
 .routes{padding:0 0 1rem;}
@@ -210,11 +220,14 @@ a:focus-visible,summary:focus-visible{
 .aside{position:sticky;top:6.8rem;}
 @media (max-width:900px){ .aside{position:static;} }
 .aside .n{color:var(--blue);font-size:.84rem;display:block;margin-bottom:.6rem;}
-.aside h2{margin:0;font-size:1.08rem;font-weight:700;line-height:1.7;letter-spacing:-.008em;}
-.aside .hint{margin:1rem 0 0;color:var(--ink-3);font-size:.85rem;line-height:1.85;}
+/* ★ 2026-08-09：本文（17.5px）は変えず、見出しとの差だけ広げた。
+   本文と見出しが近すぎて、長いページが「同じ大きさで続く」印象になっていた。
+   小さい文字（.hint／.trust span／.case dt）は、これ以上縮めない。読者に50〜60代がいる。 */
+.aside h2{margin:0;font-size:1.2rem;font-weight:700;line-height:1.65;letter-spacing:-.008em;}
+.aside .hint{margin:1rem 0 0;color:var(--ink-3);font-size:.88rem;line-height:1.85;}
 
 .col{max-width:41rem;}
-.col h3{margin:3.2rem 0 1.1rem;font-size:1.2rem;font-weight:700;line-height:1.7;letter-spacing:-.008em;}
+.col h3{margin:3.2rem 0 1.1rem;font-size:1.3rem;font-weight:700;line-height:1.65;letter-spacing:-.008em;}
 .col h3:first-child{margin-top:0;}
 .muted{color:var(--ink-2);font-size:.96rem;}
 .lead{font-size:1.16rem;font-weight:700;line-height:1.85;margin:0 0 1.5em;}
@@ -266,7 +279,7 @@ a:focus-visible,summary:focus-visible{
 .case h4{margin:0 0 1.3rem;font-size:1.14rem;font-weight:700;line-height:1.65;}
 .case dl{margin:0;display:grid;gap:1rem;}
 .case dl > div{display:grid;grid-template-columns:8rem 1fr;gap:1.2rem;}
-.case dt{margin:0;color:var(--blue);font-size:.77rem;font-weight:700;
+.case dt{margin:0;color:var(--blue);font-size:.82rem;font-weight:700;
   letter-spacing:.08em;padding-top:.45em;}
 .case dd{margin:0;font-size:.95rem;line-height:1.9;}
 @media (max-width:640px){
@@ -296,12 +309,23 @@ a:focus-visible,summary:focus-visible{
 /* 発信のバナー */
 .banners{list-style:none;margin:0 0 2rem;padding:0;display:grid;gap:1rem;}
 .banners li{position:relative;}
+.banners a{display:block;}
 /* ★ 4:1。5:2（717x287px）は5枚並べると1,566px あって縦に重かった。
    元画像の白フチを落とし、上下を対称に切って 717x179px にした（合計 971px）。 */
 .banners img{display:block;width:100%;height:auto;aspect-ratio:4/1;border-radius:10px;
   border:1px solid var(--line);box-shadow:0 1px 4px -1px rgba(10,28,73,.10);
   transition:transform .3s var(--ease),box-shadow .3s var(--ease);}
 .banners a:hover img{transform:translateY(-2px);box-shadow:0 14px 30px -20px rgba(10,28,73,.35);}
+/* ★ 5枚のうち書籍だけリンク先が無い。マウスのない画面では hover で区別できないので、
+   文字で「押せる／押せない」を出す（2026-08-09 外部レビュー）。 */
+.banners .cap{display:block;margin:.5rem .15rem 0;font-size:.83rem;font-weight:700;
+  letter-spacing:.03em;color:var(--blue);}
+.banners .cap::after{content:"→";margin-left:.45em;display:inline-block;
+  transition:transform .25s var(--ease);}
+.banners a:hover .cap::after{transform:translateX(4px);}
+.banners .cap.soon{color:var(--ink-3);font-weight:500;}
+.banners .cap.soon::after{content:none;}
+.banners li.pending img{opacity:.92;}
 /* ★ サービスのマーク。各社の公式ブランド色で出す。
    白い台に載せるのは、Spotify のガイドラインが「緑のロゴは黒か白の背景の上だけ」と
    定めているため（YouTube と note の下地も、これで揃う）。 */
@@ -399,7 +423,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <li><a href="#people">人と組織</a></li>
         <li><a href="#career">経歴</a></li>
         <li><a href="#media">発信</a></li>
-        <li><a href="#contact">ご依頼</a></li>
+        <li><a href="#contact">ご相談・ご依頼</a></li>
       </ul>
     </details>
   </div>
@@ -420,7 +444,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <p class="sub">数字だけ見ても分からない。<br>社長の話だけ聞いても分からない。<br><strong>役員会に出る。管理職と話す。現場まで行く。</strong></p>
 
         <div class="hero-acts">
-          <a class="btn btn-solid" href="#contact">ご依頼・ご相談
+          <a class="btn btn-solid" href="#contact">ご相談・ご依頼
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
           <a class="btn btn-ghost" href="#work">私の仕事
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -439,12 +463,13 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       <div>
         <span class="cat">資格</span>
         <b>中小企業診断士</b>
+        <span>国家資格</span>
         <b>ITストラテジスト</b>
         <b>プロジェクトマネージャ</b>
-        <span>いずれも国家資格</span>
+        <span>情報処理技術者試験（経済産業省）</span>
       </div>
       <div>
-        <span class="cat">公職</span>
+        <span class="cat">公的機関での役割</span>
         <b>中小企業アドバイザー（経営支援）</b>
         <span>独立行政法人中小企業基盤整備機構</span>
         <b>ビジネスサポートサービス専門家</b>
@@ -455,7 +480,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <b>中小企業庁</b>
         <b>愛知県・あいち産業振興機構</b>
         <b>品川区</b>
-        <span>いずれもDX・業務改善をテーマに講師</span>
+        <span>DX・業務改善をテーマに、講師として登壇</span>
       </div>
       <div>
         <span class="cat">経験</span>
@@ -483,9 +508,9 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <span class="go">依頼する<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
       </a>
       <a class="route rise" href="#media">
-        <span class="rn mark">Writing</span>
+        <span class="rn mark">Media</span>
         <h3>書いているもの、話しているもの</h3>
-        <p>経営コラム、note、YouTube、音声。記事の執筆・監修、取材もお受けしています。</p>
+        <p>経営や組織について考えていること、現場で感じたことを、経営コラム、note、YouTube、音声で発信しています。記事の執筆・監修、取材もお受けしています。</p>
         <span class="go">読む・観る・聴く<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
       </a>
     </div>
@@ -517,7 +542,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <h2>会社の中で、<br>何を見ているか</h2>
       </div>
       <div class="col rise">
-        <p>現場で実際に起きていることを見る、管理職とディスカッションする、<strong>その上で社長とも一緒に考えます。</strong>社長とだけ話して判断することはしません。</p>
+        <p><strong>現場で実際に起きていることを見て、管理職と話し、そのうえで社長と一緒に考えます。</strong>社長とだけ話して判断することはしません。</p>
 
         <p class="lead">経営戦略、組織・人材、業務プロセス、会計、IT。</p>
 
@@ -525,7 +550,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
 
         <p>私が専門を一つに絞っていないのは、<strong>経営の問題は、組織、業務、会計、ITなどが互いにつながって起きていることが多いからです。</strong>一つの領域だけを最適化しても、会社全体としては別のところにひずみが出ます。</p>
 
-        <p>そして、<strong>中堅・中小企業では、課題ごとに何人もの専門家を入れることが現実的とは限りません。</strong>だから私は、経営全体を見渡しながら、<strong>自分で扱えるところは自分で扱い、必要に応じて専門家ともつなぐ。</strong>そういう立ち位置でいたいと思っています。</p>
+        <p>そして、<strong>中堅・中小企業では、課題ごとに何人もの専門家を入れることが現実的とは限りません。</strong>だから私は、経営全体を見渡しながら、<strong>自分で扱えるところは自分で扱い、必要に応じて専門家ともつなぐ。</strong>そういう立ち位置で支援しています。</p>
       </div>
     </div>
   </section>
@@ -588,7 +613,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <p>私は、それをそのまま伝言しません。<strong>自分なりに論点を整理し、必要であれば自分の意見も加えて、社長に問いかけます。</strong>すると、取締役から社長へ直接ぶつけるのではなく、<strong>第三者から出された経営の論点</strong>として扱えます。</p>
         <p>同じ会議室にいても、立場が違えば直接は言えないことがあります。<strong>私が間にいることで、話せることがあります。</strong></p>
 
-        <p class="punch">人はみんな違う。その当たり前の前提に立つと、それぞれが納得できる着地点が見えてくることがあります。私は、そうやって立場の違う人たちの間に入り、着地点を探すということを繰り返してきました。</p>
+        <p class="punch">人はみんな違う。その前提に立ち、立場の違う人たちの間に入って、共通する目的と着地点を探す。私は、そういう仕事を何度もしてきました。</p>
 
         <h3>必要なら、言いにくいことも言う</h3>
         <p>ある社長には、こうお伝えしたことがあります。</p>
@@ -596,7 +621,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <p class="said">会社がこれ以上大きくならない原因は、社長、あなたですよ。</p>
 
         <p>もちろん、最初からそのようなことを社長に伝えるわけではありません。そこに至るまでに、何人もの話を聞き、会議を見て、実際の仕事を見ています。<strong>そのうえで、会社をさらに成長させるために必要だと判断すれば、言います。</strong></p>
-        <p>外部の人間を入れる意味は、<strong>社内では言いにくいことまで、経営の論点として扱えること</strong>にあると思っています。</p>
+        <p>外部の人間を入れる意味は、<strong>社内では言いにくいことも、経営の論点として扱えること</strong>にあると思っています。</p>
 
         <h3>でも、代わりにはやらない</h3>
         <p>私は、答えを渡して終わるコンサルティングはしたくありません。</p>
@@ -639,7 +664,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
             <h4>「経営理念をつくりたい」と言われて、組織の形を変えた</h4>
             <dl>
               <div><dt>相談されたこと</dt><dd>新規事業で会社をもっと大きくしたい。ただ、いまの組織のままでは難しい。だから<strong>経営理念をつくって、社内に浸透させたい</strong>。</dd></div>
-              <div><dt>見えてきたこと</dt><dd>新しく採用した課長や若手から話を聞くと、まったく別のことを言っていました。創業以来を支えてきた二人が現場の最前線に立ち続けていて、人が育つ順番が来ない。<strong>二人に原因があったのは事実です。ただ、それは構造の問題でもありました。</strong>役割と責任範囲が決まらないまま、権限がこの二人に集中していた。そして遡れば、管理職の適性を見ないまま部長を置いたのは社長です。<strong>経営理念をつくっても、この形のままでは浸透しません。</strong></dd></div>
+              <div><dt>見えてきたこと</dt><dd>話を聞いていくと、相談された内容とはまったく別のことが出てきました。<strong>創業以来、会社を支えてきた優秀な二人が、いつのまにか組織の天井になっていた。</strong>二人が現場の最前線に立ち続けていて、若い世代に役割と権限が移る順番が来ない。本人たちだけの問題ではありません。役割と責任範囲が曖昧なまま、権限が二人に集中する組織になっていた。そして、その形をつくってきたのは社長自身です。社長も、この状況に困っていました。<strong>経営理念をつくっても、この形のままでは浸透しません。</strong></dd></div>
               <div><dt>やったこと</dt><dd><strong>社長に、これから会社を担ってほしい次世代のリーダー候補を選んでもらい、一人ひとりから話を聞きました。</strong>出てきた意見を論点として整理し、本人たちからは言いにくいことも含めて、私から社長に伝えました。そのうえで、こう申し上げました。「もっと権限を委譲しながら若手を抜擢して、組織体制を変えていかないと大きくなりませんよ」。</dd></div>
               <div><dt>その後</dt><dd>権限の持たせ方と役割を組み替え、若手が案件を任される形に変わりました。経営理念づくりは、その後です。</dd></div>
               <div><dt>やらなかったこと</dt><dd><strong>依頼されたとおりに経営理念をつくること。</strong>つくれば納品はできますが、壁に貼られて終わります。</dd></div>
@@ -652,7 +677,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
             <dl>
               <div><dt>相談されたこと</dt><dd><strong>IT化構想の策定。</strong>生産性を上げ、経営の数字が見えるようにしたい。</dd></div>
               <div><dt>見えてきたこと</dt><dd>技術の問題ではありませんでした。過去にも構想はつくられていて、そのたびに最後でひっくり返されていた。<strong>本当の論点は、誰が決めるかでした。</strong></dd></div>
-              <div><dt>やったこと</dt><dd>現場と管理部門を回って業務を洗い出し、あるべき姿を一緒に設計しました。そして、<strong>「あの人は反対派だから近づかないほうがいい」と、社長を含むプロジェクトメンバー全員が言っていた役員のところへ、私が一人で会いに行きました。</strong>特別なことはしていません。ざっくばらんに話しただけです。丁寧に話を聞いていただき、最終的に改革への賛同を得ることができました。</dd></div>
+              <div><dt>やったこと</dt><dd>現場と管理部門を回って業務を洗い出し、あるべき姿を一緒に設計しました。そして、<strong>社内で「反対派」と見られていた役員のところへ、一人で話を聞きに行きました。</strong><br><strong>「反対する人」と決めつけず、何を懸念しているのか、何なら納得できるのかを確認しました。</strong>論点を一つずつ整理した結果、最終的に改革への賛同を得ることができました。</dd></div>
               <div><dt>その後</dt><dd>構想はひっくり返らず、システムの導入まで進みました。</dd></div>
               <div><dt>やらなかったこと</dt><dd><strong>派閥のラベルで、人を分けること。</strong></dd></div>
             </dl>
@@ -663,7 +688,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
             <h4>受注が増えて回らない。原因は人手ではなかった</h4>
             <dl>
               <div><dt>相談されたこと</dt><dd>工事の受注が急に増えて、いまの体制では回らない。<strong>DXで生産性を上げたい。</strong></dd></div>
-              <div><dt>見えてきたこと</dt><dd>業務を分解していくと、同じ情報を何度も入力し、集計し直していました。工事ごとの売上と原価は、締めてみないと分からない。<strong>足りなかったのは人手ではなく、工事番号を軸にした管理の単位でした。</strong></dd></div>
+              <div><dt>見えてきたこと</dt><dd>業務を分解していくと、同じ情報を何度も入力し、集計し直していました。工事ごとの売上と原価は、締めてみないと分からない。<strong>足りなかったのは人手ではなく、工事番号を軸に、売上と原価を一つにつないで見る仕組みでした。</strong></dd></div>
               <div><dt>やったこと</dt><dd>工事番号で情報を一元化する形を設計し、システムを選定して導入。あわせて<strong>月次決算を立ち上げ、資金繰りの管理を組み直しました。</strong></dd></div>
               <div><dt>その後</dt><dd>運用開始から1年たたずに、<strong>管理部門の残業が20%以上減りました。</strong>月次で数字が出るようになり、意思決定が早くなっています。</dd></div>
               <div><dt>やらなかったこと</dt><dd><strong>私が代わりに業務フローを書くこと。</strong>書き出しは、現場の方にやってもらいました。</dd></div>
@@ -742,11 +767,12 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       <div class="col rise">
 
         <h3>人は、違っていて当然</h3>
-        <p>組織を上位2割・中位6割・下位2割で見る考え方があります。ただ、これは相対的に分けているだけです。<strong>下位の2割を切り離しても、組織の問題は解決しません。</strong>下位2割が抜けたら、残った人の中に新たな下位2割ができるだけです。</p>
-        <p>その人を「できない人」と決めつける前に、<strong>強みが活きる役割や、力を発揮できていない理由を見る。</strong>それが、人を預かる側の仕事だと思っています。</p>
+        <p>組織を上位2割・中位6割・下位2割で見る考え方があります。ただ、これは相対評価の目安であって、法則ではありません。<strong>下位の2割を切り離しても、残った人の中に新しい下位2割ができるだけです。</strong></p>
+        <p>同じ人でも、役割や上司、チームが変われば、発揮できる力は変わります。だから私は、人を「できる人」「できない人」と分けることには慎重です。</p>
+        <p>その人を「できない人」と決めつける前に、<strong>強みが活きる役割はないか。力を発揮できていない理由は何か。</strong>そこを見ることが、人を預かる側の仕事だと思っています。</p>
 
         <h3>正論だけでは、人は動かない</h3>
-        <p>感情的な受容は、論理的な受容に先行します。理屈が正しいかどうかより先に、「この人の話なら聞いてもいい」と思えるかどうかが来る。順番を間違えると、正しいことを言っているのに何も動きません。</p>
+        <p>正しいことを言えば人が動く、とは限りません。理屈が正しいかどうかより先に、<strong>「この人の話なら聞いてみよう」と思えるかどうか</strong>があります。順番を間違えると、正しいことを言っているのに何も動きません。</p>
         <p>組織も同じです。動かないのは、一人ひとりが分かっていないからではありません。<strong>一人ひとりは分かっているのに、組織としてひとつの方向にならないから動かない。</strong>そこを揃える支援をするのが、私の役割です。</p>
 
         <h3>人は、適切な期待と機会があれば変わる</h3>
@@ -758,11 +784,11 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
         <p>そのように考える根っこには、自分の未熟さを認めたくないという恐れがある。私は、そう考えています。</p>
         <p>だから、<strong>相手に変化を求めるときほど、自分の見立てが本当に正しいのかを疑います。</strong>感情ではなく、事実を見るためです。</p>
 
-        <h3>絶対にしないこと</h3>
+        <h3>人と関わるときに、しないと決めていること</h3>
         <ul class="never">
-          <li><em>01</em>未経験の領域を、教えずに渡す</li>
-          <li><em>02</em>現場の「分からない」を、個人の能力不足で片づける</li>
-          <li><em>03</em>人前で、恥をかかせる</li>
+          <li><em>01</em>未経験の仕事を、教えずに任せる</li>
+          <li><em>02</em>仕組みの問題を、個人の能力不足で片づける</li>
+          <li><em>03</em>自分のやり方や基準を、そのまま相手に押しつける</li>
         </ul>
 
       </div>
@@ -780,7 +806,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       <div class="col rise">
 
         <h3>キャリアの原点</h3>
-        <p>新入社員のとき、会計の知識もシステム機能も十分に分からないまま、基幹システムの本番フォローをお客様の拠点で1人で担当したことがあります。</p>
+        <p>新入社員のとき、会計の知識もシステム機能も十分に分からないまま、基幹システムの稼働後サポートを、お客様の拠点で一人で担当したことがあります。</p>
         <p>わからないことは、そのままにできませんでした。簿記を学び、マニュアルを読み込み、実際に使っている人の席まで行って、画面を一緒に見ながら確認しました。</p>
 
         <p class="punch">そのときに身についたのが、分からないことは自分で調べること。実際の現場を見ること。分かったふりをしないこと。そして、相手の代わりにやって終わらせないこと。</p>
@@ -813,7 +839,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
           <div class="dom">
             <span class="di"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3.5" width="15" height="10" rx="1.5"/><path d="M10 13.5V16.5M7 16.5h6M6 7h4M6 10h6"/></svg></span>
             <h4>IT・DX</h4>
-            <p>DX戦略・IT構想の策定から、ERP・基幹システムの選定、RFP作成、ベンダー選定、導入プロジェクトの推進まで。<strong>ITシステムを販売・開発する立場ではないので、発注者側に立って完全中立の立場で支援できます。</strong></p>
+            <p>DX戦略・IT構想の策定から、ERP・基幹システムの選定、RFP作成、ベンダー選定、導入プロジェクトの推進まで。<strong>特定の製品やベンダーを販売する立場ではないので、発注者側に立って比較・選定を支援できます。</strong></p>
           </div>
         </div>
 
@@ -842,18 +868,23 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       <div class="col rise">
         <ul class="banners">
           <li><a href="https://karasawaconsulting.jp/column/">
-            <img src="images/bn-column.jpg" alt="経営コラム｜中堅・中小企業の経営の論点を、1本ずつ" width="1500" height="375" loading="lazy" decoding="async"></a></li>
+            <img src="images/bn-column.jpg" alt="経営コラム｜中堅・中小企業の経営の論点を、1本ずつ" width="1500" height="375" loading="lazy" decoding="async">
+            <span class="cap">経営コラムを読む</span></a></li>
           <li><a href="https://note.com/karasawaconsul">
             <img src="images/bn-note.jpg" alt="note｜失敗したこと、考え方が変わったきっかけ" width="1500" height="375" loading="lazy" decoding="async">
-            <span class="svc nt" aria-hidden="true"><b>note</b></span></a></li>
+            <span class="svc nt" aria-hidden="true"><b>note</b></span>
+            <span class="cap">noteを読む</span></a></li>
           <li><a href="https://www.youtube.com/@karasawaconsul">
             <img src="images/bn-youtube.jpg" alt="YouTube 従業員30名からの実践経営学｜1本7〜15分" width="1500" height="375" loading="lazy" decoding="async">
-            <span class="svc yt" aria-hidden="true"><svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M 27.4 3.55 A 3.5 3.5 0 0 0 24.94 1.07 C 22.76 0.5 14 0.5 14 0.5 S 5.24 0.5 3.06 1.07 A 3.5 3.5 0 0 0 0.6 3.55 C 0.04 5.66 0.04 10 0.04 10 s 0 4.34 0.56 6.45 a 3.5 3.5 0 0 0 2.46 2.48 C 5.24 19.5 14 19.5 14 19.5 s 8.76 0 10.94 -0.57 a 3.5 3.5 0 0 0 2.46 -2.48 C 27.96 14.34 27.96 10 27.96 10 s 0 -4.34 -0.56 -6.45 Z"/><path fill="#FBFCFD" d="M11.5 14 18.5 10 11.5 6Z"/></svg></span></a></li>
+            <span class="svc yt" aria-hidden="true"><svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M 27.4 3.55 A 3.5 3.5 0 0 0 24.94 1.07 C 22.76 0.5 14 0.5 14 0.5 S 5.24 0.5 3.06 1.07 A 3.5 3.5 0 0 0 0.6 3.55 C 0.04 5.66 0.04 10 0.04 10 s 0 4.34 0.56 6.45 a 3.5 3.5 0 0 0 2.46 2.48 C 5.24 19.5 14 19.5 14 19.5 s 8.76 0 10.94 -0.57 a 3.5 3.5 0 0 0 2.46 -2.48 C 27.96 14.34 27.96 10 27.96 10 s 0 -4.34 -0.56 -6.45 Z"/><path fill="#FBFCFD" d="M11.5 14 18.5 10 11.5 6Z"/></svg></span>
+            <span class="cap">YouTubeを観る</span></a></li>
           <li><a href="https://open.spotify.com/show/7ocqmOkZ8To1KKcHTn5qW9">
             <img src="images/bn-radio.jpg" alt="音声配信 明日が変わる経営ラジオ〜社長が動く瞬間〜" width="1500" height="375" loading="lazy" decoding="async">
-            <span class="svc sp" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1ED760"/><g fill="none" stroke="#FBFCFD" stroke-linecap="round"><path d="M6.2 8.9c4-1.1 9.4-.8 12.7 1.3" stroke-width="2.1"/><path d="M7.1 12.6c3.3-.9 7.8-.6 10.6 1.1" stroke-width="1.8"/><path d="M8 16.2c2.6-.7 6.1-.5 8.3.9" stroke-width="1.5"/></g></svg></span></a></li>
-          <li id="book">
-            <img src="images/bn-book.jpg" alt="書籍 プレイングマネジャーの「任せ」のルール｜2026年10月 発行予定" width="1500" height="375" loading="lazy" decoding="async"></li>
+            <span class="svc sp" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1ED760"/><g fill="none" stroke="#FBFCFD" stroke-linecap="round"><path d="M6.2 8.9c4-1.1 9.4-.8 12.7 1.3" stroke-width="2.1"/><path d="M7.1 12.6c3.3-.9 7.8-.6 10.6 1.1" stroke-width="1.8"/><path d="M8 16.2c2.6-.7 6.1-.5 8.3.9" stroke-width="1.5"/></g></svg></span>
+            <span class="cap">音声を聴く</span></a></li>
+          <li id="book" class="pending">
+            <img src="images/bn-book.jpg" alt="書籍 プレイングマネジャーの「任せ」のルール｜2026年10月 発行予定" width="1500" height="375" loading="lazy" decoding="async">
+            <span class="cap soon">2026年10月 発行予定</span></li>
         </ul>
 
         <p class="muted" style="margin-bottom:2.6rem;">記事の執筆・監修、取材もお受けしています。</p>
@@ -903,7 +934,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
     <div class="wrap sec-grid">
       <div class="aside">
         <span class="n mark">08</span>
-        <h2>ご依頼</h2>
+        <h2>ご相談・ご依頼</h2>
         <p class="hint">企画段階からのご相談も歓迎します。</p>
       </div>
       <div class="col rise">
@@ -1014,15 +1045,15 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
       {"@type": "HighSchool", "name": "埼玉県立熊谷高等学校"},
       {"@type": "CollegeOrUniversity", "name": "早稲田大学", "sameAs": "https://www.waseda.jp/"}
     ],
-    "description": "会社の中に入らないと、見えないことがある。役員会に出て、管理職と話し、現場まで行く。経営計画・組織・人材・業務・ITを横断して、中堅・中小企業の経営を経営者と一緒に考える経営コンサルタント。",
+    "description": "経営コンサルタント 唐澤智哉。役員会に出て、管理職と話し、現場まで行く。経営戦略・組織・人材・業務プロセス・会計・ITを横断し、中堅・中小企業の経営課題を見極め、実際に行動できるところまで落とします。",
     "knowsAbout": [
       "経営コンサルティング","経営計画の策定","組織開発","管理職育成","事業承継",
       "業務改革","DX","管理会計","IT導入の発注者側支援"
     ],
     "hasCredential": [
       {"@type":"EducationalOccupationalCredential","credentialCategory":"国家資格","name":"中小企業診断士"},
-      {"@type":"EducationalOccupationalCredential","credentialCategory":"国家資格","name":"ITストラテジスト"},
-      {"@type":"EducationalOccupationalCredential","credentialCategory":"国家資格","name":"プロジェクトマネージャ"}
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"国家試験（情報処理技術者試験）","name":"ITストラテジスト"},
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"国家試験（情報処理技術者試験）","name":"プロジェクトマネージャ"}
     ],
     "worksFor": {
       "@type": "Organization",
