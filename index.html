@@ -544,22 +544,22 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
   html{scroll-behavior:auto;}
   *{animation:none !important;transition:none !important;}
 }
-/* ═══ 書籍の帯（2026-11-25 追加。ヒーローの直下に1本だけ） ═══ */
+/* ═══ 書籍の帯（2026-11-25 追加。ヒーローの直下に1本だけ。色は事務所サイトの書籍の帯と同じ深緑 #1E5B3F） ═══ */
 .bookband{padding:0 0 3.2rem;}
 .bookband .bk{display:grid;grid-template-columns:auto 1fr auto;gap:2.4rem;align-items:center;
-  background:var(--navy);color:var(--on-navy);border-radius:var(--r);padding:1.9rem 2.8rem;
+  background:#1E5B3F;color:#F1F7F3;border-radius:var(--r);padding:1.9rem 2.8rem;
   transition:transform .28s var(--ease),box-shadow .28s var(--ease);}
-.bookband .bk:hover{transform:translateY(-2px);box-shadow:0 14px 30px -20px rgba(10,28,73,.45);}
+.bookband .bk:hover{transform:translateY(-2px);box-shadow:0 14px 30px -20px rgba(20,60,40,.5);}
 .bookband img{width:124px;height:auto;border-radius:2px;box-shadow:0 8px 18px -8px rgba(0,0,0,.65);}
-.bookband .bk-k{display:block;font-size:.86rem;font-weight:700;letter-spacing:.14em;color:var(--blue-lt);}
+.bookband .bk-k{display:block;font-size:.86rem;font-weight:700;letter-spacing:.14em;color:#BFE3CC;}
 .bookband .bk-t{display:block;margin-top:.35rem;font-size:1.75rem;font-weight:700;line-height:1.5;color:#fff;}
 .bookband .bk-s{display:block;margin-top:.3rem;font-size:1.05rem;line-height:1.7;}
-.bookband .bk-m{display:block;margin-top:.6rem;font-size:.9rem;line-height:1.6;color:var(--blue-lt);}
+.bookband .bk-m{display:block;margin-top:.6rem;font-size:.9rem;line-height:1.6;color:#BFE3CC;}
 .bookband .bk-go{display:inline-flex;align-items:center;gap:.6rem;padding:1.05rem 1.9rem;border-radius:7px;
-  border:1.5px solid var(--on-navy);font-size:.95rem;font-weight:700;letter-spacing:.04em;white-space:nowrap;
+  border:1.5px solid #F1F7F3;font-size:.95rem;font-weight:700;letter-spacing:.04em;white-space:nowrap;
   transition:background .28s var(--ease),color .28s var(--ease);}
 .bookband .bk-go svg{width:14px;height:14px;transition:transform .3s var(--ease);}
-.bookband .bk:hover .bk-go{background:#fff;color:var(--navy);}
+.bookband .bk:hover .bk-go{background:#fff;color:#1E5B3F;}
 .bookband .bk:hover .bk-go svg{transform:translateX(4px);}
 @media (max-width:900px){ .bookband .bk{gap:1.6rem;padding:1.6rem 1.8rem;} .bookband .bk-t{font-size:1.45rem;} }
 @media (max-width:640px){
