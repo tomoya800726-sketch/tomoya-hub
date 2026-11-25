@@ -546,24 +546,27 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
 }
 /* ═══ 書籍の帯（2026-11-25 追加。ヒーローの直下に1本だけ） ═══ */
 .bookband{padding:0 0 3.2rem;}
-.bookband .bk{display:grid;grid-template-columns:auto 1fr auto;gap:1.7rem;align-items:center;
-  background:var(--navy);color:var(--on-navy);border-radius:var(--r);padding:1.25rem 2rem;
+.bookband .bk{display:grid;grid-template-columns:auto 1fr auto;gap:2.4rem;align-items:center;
+  background:var(--navy);color:var(--on-navy);border-radius:var(--r);padding:1.9rem 2.8rem;
   transition:transform .28s var(--ease),box-shadow .28s var(--ease);}
 .bookband .bk:hover{transform:translateY(-2px);box-shadow:0 14px 30px -20px rgba(10,28,73,.45);}
-.bookband img{width:76px;height:auto;border-radius:2px;box-shadow:0 8px 18px -8px rgba(0,0,0,.65);}
-.bookband .bk-k{display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--blue-lt);}
-.bookband .bk-t{display:block;margin-top:.2rem;font-size:1.18rem;font-weight:700;line-height:1.5;color:#fff;}
-.bookband .bk-s{display:block;margin-top:.1rem;font-size:.83rem;line-height:1.7;}
-.bookband .bk-m{display:block;margin-top:.3rem;font-size:.75rem;line-height:1.6;color:var(--blue-lt);}
-.bookband .bk-go{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.5rem;border-radius:7px;
-  border:1.5px solid var(--on-navy);font-size:.85rem;font-weight:700;letter-spacing:.04em;white-space:nowrap;
+.bookband img{width:124px;height:auto;border-radius:2px;box-shadow:0 8px 18px -8px rgba(0,0,0,.65);}
+.bookband .bk-k{display:block;font-size:.86rem;font-weight:700;letter-spacing:.14em;color:var(--blue-lt);}
+.bookband .bk-t{display:block;margin-top:.35rem;font-size:1.75rem;font-weight:700;line-height:1.5;color:#fff;}
+.bookband .bk-s{display:block;margin-top:.3rem;font-size:1.05rem;line-height:1.7;}
+.bookband .bk-m{display:block;margin-top:.6rem;font-size:.9rem;line-height:1.6;color:var(--blue-lt);}
+.bookband .bk-go{display:inline-flex;align-items:center;gap:.6rem;padding:1.05rem 1.9rem;border-radius:7px;
+  border:1.5px solid var(--on-navy);font-size:.95rem;font-weight:700;letter-spacing:.04em;white-space:nowrap;
   transition:background .28s var(--ease),color .28s var(--ease);}
 .bookband .bk-go svg{width:14px;height:14px;transition:transform .3s var(--ease);}
 .bookband .bk:hover .bk-go{background:#fff;color:var(--navy);}
 .bookband .bk:hover .bk-go svg{transform:translateX(4px);}
+@media (max-width:900px){ .bookband .bk{gap:1.6rem;padding:1.6rem 1.8rem;} .bookband .bk-t{font-size:1.45rem;} }
 @media (max-width:640px){
-  .bookband .bk{grid-template-columns:auto 1fr;gap:1rem 1.1rem;padding:1.15rem 1.2rem;}
-  .bookband img{width:64px;}
+  .bookband .bk{grid-template-columns:auto 1fr;gap:1.1rem 1.2rem;padding:1.3rem 1.3rem;}
+  .bookband img{width:84px;}
+  .bookband .bk-t{font-size:1.25rem;}
+  .bookband .bk-s{font-size:.88rem;}
   .bookband .bk-go{grid-column:1 / -1;justify-content:center;}
 }
 </style>
@@ -630,7 +633,7 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
   <section class="bookband rise" aria-label="著書">
     <div class="wrap">
       <a class="bk" href="https://www.amazon.co.jp/dp/4868511122">
-        <img src="images/book-cover.jpg?v=20261125" alt="『プレイングマネジャーの「手放す」技術』の表紙" width="240" height="355" decoding="async">
+        <img src="images/book-cover.jpg?v=20261125b" alt="『プレイングマネジャーの「手放す」技術』の表紙" width="320" height="473" decoding="async">
         <div>
           <span class="bk-k">著書　2026年12月9日発売</span>
           <b class="bk-t">プレイングマネジャーの「手放す」技術</b>
@@ -1096,8 +1099,8 @@ footer .btm{margin-top:2.2rem;font-size:.7rem;letter-spacing:.08em;opacity:.42;}
             <span class="svc sp" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1ED760"/><g fill="none" stroke="#FBFCFD" stroke-linecap="round"><path d="M6.2 8.9c4-1.1 9.4-.8 12.7 1.3" stroke-width="2.1"/><path d="M7.1 12.6c3.3-.9 7.8-.6 10.6 1.1" stroke-width="1.8"/><path d="M8 16.2c2.6-.7 6.1-.5 8.3.9" stroke-width="1.5"/></g></svg></span>
             <span class="cap">音声を聴く</span></a></li>
           <li id="book"><a href="https://www.amazon.co.jp/dp/4868511122">
-            <img src="images/bn-book.jpg?v=20261125" alt="書籍 プレイングマネジャーの「手放す」技術（セルバ出版）｜2026年12月9日発売" width="1500" height="375" loading="lazy" decoding="async">
-            <span class="cap">Amazonで見る</span></a></li>
+            <img src="images/bn-book.jpg?v=20261125b" alt="著書 プレイングマネジャーの「手放す」技術（唐澤智哉 著・セルバ出版）｜2026年12月9日発売" width="1500" height="375" loading="lazy" decoding="async">
+            <span class="cap">著書をAmazonで見る</span></a></li>
         </ul>
 
         <p style="margin-bottom:2.6rem;"><strong>記事の執筆・監修、取材もお受けしています。</strong></p>
